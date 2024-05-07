@@ -1,0 +1,7 @@
+.vscode
+.venv
+__pycache__/
+/data/**/*.xml
+error.log
+.ipynb_checkpoints
+sketchpad_visuals.ipynb
