@@ -18,11 +18,12 @@ def get_records(url, params):
         log(f"Error sending request: {e}", "error")
 
 
-def write_records_to_file(records, directory_path):
-    # Save the response to a file named records-<timestamp>.xml
+def write_records_to_file(records, directory_path, suffix=""):
+    # Save the response to a file named records-<timestamp>-<suffix>.xml
     file_path = os.path.join(
         directory_path,
-        "records-" + datetime.datetime.now().strftime("%Y%m%d%H%M%S") + ".xml")
+        f"records-{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}-{suffix}.xml"
+    )
     # Write the response to a file
     log(f"Writing response to file: {file_path}")
     try:
@@ -33,11 +34,13 @@ def write_records_to_file(records, directory_path):
 
 
 def download_oai_pmh_records(url, directory_path):
+    # Initialize the suffix for the file name
+    suffix = 1
     # Define the parameters for the request
     params = {"verb": "ListRecords", "metadataPrefix": "oai_dc"}
     # Send the first request
     first_page = get_records(url, params)
-    write_records_to_file(first_page, directory_path)
+    write_records_to_file(first_page, directory_path, suffix)
     # Extract the resumption token from the first page
     resumptionToken = extract_from_xml(
         first_page, ".//{http://www.openarchives.org/OAI/2.0/}resumptionToken")
@@ -47,7 +50,9 @@ def download_oai_pmh_records(url, directory_path):
         params = {"verb": "ListRecords", "resumptionToken": resumptionToken}
         next_page = get_records(url, params)
         if next_page:
-            write_records_to_file(next_page, directory_path)
+            # Increment the suffix for the file name
+            suffix += 1
+            write_records_to_file(next_page, directory_path, suffix)
             # Extract the resumption token from the next page
             resumptionToken = extract_from_xml(
                 next_page,
