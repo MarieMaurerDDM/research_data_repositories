@@ -13,7 +13,7 @@ def download_clarin_records():
             'url':
            'http://www.phonetik.uni-muenchen.de/cgi-bin/BASRepository/oaipmh/oai.pl',
             'path': os.path.join(get_project_root(), "data", "clarin", "bas")
-        }
+        },
         {
             'url': 'https://clarin.bbaw.de:8088/oaiprovider',
             'path': os.path.join(get_project_root(), "data", "clarin", "bbaw")
