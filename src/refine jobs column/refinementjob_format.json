@@ -1,0 +1,29 @@
+[
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "record - metadata - oai_dc:dc - dc:format",
+    "guessCellType": true,
+    "removeOriginalColumn": false,
+    "mode": "separator",
+    "separator": "/",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column record - metadata - oai_dc:dc - dc:format by separator"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:format 1",
+    "newColumnName": "format - IAANA recommendation - mediatype",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:format 1 to format - IAANA recommendation - mediatype"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:format 2",
+    "newColumnName": "format - IAANA recommendation - subtype",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:format - IAANA recommendation - subtype"
+  }
+]

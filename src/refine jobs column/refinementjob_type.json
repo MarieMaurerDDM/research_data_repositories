@@ -1,0 +1,28 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "record - metadata - oai_dc:dc - dc:type",
+    "expression": "grel:value",
+    "onError": "keep-original",
+    "newColumnName": "type - dcmi recommendation",
+    "columnInsertIndex": 13,
+    "description": "Create column type - dcmi recommendation at index 13 based on column record - metadata - oai_dc:dc - dc:type using expression grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "record - metadata - oai_dc:dc - dc:type",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:type using expression value.toLowercase()"
+  }
+]
