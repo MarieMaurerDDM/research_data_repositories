@@ -1,0 +1,85 @@
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - header - datestamp",
+    "newColumnName": "datestamp",
+    "description": "Rename column record - header - datestamp to datestamp"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:creator",
+    "newColumnName": "creator",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:creator to creator"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:language",
+    "newColumnName": "language",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:language to language"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:identifier",
+    "newColumnName": "identifier",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:identifier to identifier"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:title",
+    "newColumnName": "title",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:title to title"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:description",
+    "newColumnName": "description",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:description to description"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:date",
+    "newColumnName": "date",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:date to date"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:publisher",
+    "newColumnName": "publisher",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:publisher to publisher"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:type",
+    "newColumnName": "type",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:type to type"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "record - header - identifier",
+    "description": "Remove column record - header - identifier"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:format",
+    "newColumnName": "format",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:format to format"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "format - IAANA recommendation - mediatype",
+    "newColumnName": "format - mediatype",
+    "description": "Rename column format - IAANA recommendation - mediatype to format - mediatype"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "format - IAANA recommendation - subtype",
+    "newColumnName": "format - subtype",
+    "description": "Rename column format - IAANA recommendation - subtype to format - subtype"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:subject",
+    "newColumnName": "subject",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:subject to subject"
+  }
+]
