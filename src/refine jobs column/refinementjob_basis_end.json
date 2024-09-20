@@ -54,11 +54,6 @@
     "description": "Rename column record - metadata - oai_dc:dc - dc:type to type"
   },
   {
-    "op": "core/column-removal",
-    "columnName": "record - header - identifier",
-    "description": "Remove column record - header - identifier"
-  },
-  {
     "op": "core/column-rename",
     "oldColumnName": "record - metadata - oai_dc:dc - dc:format",
     "newColumnName": "format",
@@ -66,20 +61,38 @@
   },
   {
     "op": "core/column-rename",
-    "oldColumnName": "format - IAANA recommendation - mediatype",
-    "newColumnName": "format - mediatype",
-    "description": "Rename column format - IAANA recommendation - mediatype to format - mediatype"
-  },
-  {
-    "op": "core/column-rename",
-    "oldColumnName": "format - IAANA recommendation - subtype",
-    "newColumnName": "format - subtype",
-    "description": "Rename column format - IAANA recommendation - subtype to format - subtype"
-  },
-  {
-    "op": "core/column-rename",
     "oldColumnName": "record - metadata - oai_dc:dc - dc:subject",
     "newColumnName": "subject",
     "description": "Rename column record - metadata - oai_dc:dc - dc:subject to subject"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:source",
+    "newColumnName": "source",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:source to source"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:rights",
+    "newColumnName": "rights",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:rights to rights"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:relation",
+    "newColumnName": "relation",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:relation to relation"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:contributor",
+    "newColumnName": "contributor",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:contributor to contributor"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - metadata - oai_dc:dc - dc:coverage",
+    "newColumnName": "coverage",
+    "description": "Rename column record - metadata - oai_dc:dc - dc:coverage to coverage"
   }
 ]
