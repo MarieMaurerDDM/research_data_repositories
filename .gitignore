@@ -1,8 +1,8 @@
 .vscode
 .venv
 __pycache__/
-/data/**/*.xml
-/data/**/*.csv
+/data/clarin
+/data/dariah
 error.log
 .ipynb_checkpoints
 sketchpad_visuals.ipynb
