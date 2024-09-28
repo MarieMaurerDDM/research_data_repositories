@@ -6,4 +6,6 @@ __pycache__/
 error.log
 .ipynb_checkpoints
 sketchpad_visuals.ipynb
+troubleshooting.ipynb
 tips.csv
+
