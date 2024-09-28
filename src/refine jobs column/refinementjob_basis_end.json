@@ -94,5 +94,23 @@
     "oldColumnName": "record - metadata - oai_dc:dc - dc:coverage",
     "newColumnName": "coverage",
     "description": "Rename column record - metadata - oai_dc:dc - dc:coverage to coverage"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "record - header - identifier",
+    "newColumnName": "record id",
+    "description": "Rename column record - header - identifier to record id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "format - IAANA recommendation - mediatype",
+    "newColumnName": "format - mediatype",
+    "description": "Rename column format - IAANA recommendation - mediatype to format - mediatype"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "format - IAANA recommendation - subtype",
+    "newColumnName": "format - subtype",
+    "description": "Rename column format - IAANA recommendation - subtype to format - subtype"
   }
 ]
