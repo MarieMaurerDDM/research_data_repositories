@@ -56,7 +56,7 @@ def download_clarin_records():
         'url':
         'https://textgridlab.org/1.0/tgoaipmh/oai',
         'path':
-        os.path.join(get_project_root(), "data", "clarin", "tg-rep")
+        os.path.join(get_project_root(), "data", "clarin", "tg")
     }, {
         'url':
         'https://api.ka3.uni-koeln.de/oai/lac',
