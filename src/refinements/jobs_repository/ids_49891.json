@@ -1,0 +1,1431 @@
+[
+    {
+        "op": "core/column-move",
+        "columnName": "record - header - datestamp",
+        "index": 0,
+        "description": "Move column record - header - datestamp to position 0"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "Archive",
+        "description": "Remove column Archive"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "File",
+        "description": "Remove column File"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - xsi:schemaLocation",
+        "description": "Remove column record - metadata - oai_dc:dc - xsi:schemaLocation"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - header - datestamp",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - header - datestamp using expression value.toDate()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "de"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:title - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "de"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "en"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "eng"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:type - xml:lang",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:type - xml:lang",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [],
+                    "selectBlank": true,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value.toLowercase()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:type using expression value.toLowercase()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "de"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "en"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "eng"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:description",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:description",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "(Beschluß folgt in Nr. 12.)\n\n \n\n Gutes Beispiel.\n\n\n\n Mittel gegen das Nasenbluten.\n\n\n\n Miscellen\n\nLiterarische Anzeige.\n\n \n\n Neuestes und vollständigstes\n\n Fremdwörterbuch,\n\n zur Erklärung aller aus fremden Sprachen ent=\n\n lehnten Wörter und Ausdrücke, welche in den\n\n Künsten und Wissenschaften, im Handel und\n\n Verkehr vorkommen, nebst einem Anhange von\n\n Eigennamen, mit Bezeichnung der Aussprache\n\n bearbeitet von\n\n Dr. J. H. Kaltschmidt.\n\n \n\n Jn 10 Heften zu 8 Ngr\n\n \n\n Leipzig, bei F. A. Brockhaus.\n\n \n\nHerausgegeben unter Verantwortlichkeit der Verlagshandlung F. A. Brockhaus in Leipzig\n\nDas Pfennig=Magazin\n\n für\n\n Belehrung und Unterhaltung",
+                                "l": "(Beschluß folgt in Nr. 12.)\n\n \n\n Gutes Beispiel.\n\n\n\n Mittel gegen das Nasenbluten.\n\n\n\n Miscellen\n\nLiterarische Anzeige.\n\n \n\n Neuestes und vollständigstes\n\n Fremdwörterbuch,\n\n zur Erklärung aller aus fremden Sprachen ent=\n\n lehnten Wörter und Ausdrücke, welche in den\n\n Künsten und Wissenschaften, im Handel und\n\n Verkehr vorkommen, nebst einem Anhange von\n\n Eigennamen, mit Bezeichnung der Aussprache\n\n bearbeitet von\n\n Dr. J. H. Kaltschmidt.\n\n \n\n Jn 10 Heften zu 8 Ngr\n\n \n\n Leipzig, bei F. A. Brockhaus.\n\n \n\nHerausgegeben unter Verantwortlichkeit der Verlagshandlung F. A. Brockhaus in Leipzig\n\nDas Pfennig=Magazin\n\n für\n\n Belehrung und Unterhaltung"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:description",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:description",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "(Beschluß folgt in Nr. 12.)\n\n \n\n Gutes Beispiel.\n\n\n\n Mittel gegen das Nasenbluten.\n\n\n\n Miscellen\n\nLiterarische Anzeige.\n\n \n\n Neuestes und vollständigstes\n\n Fremdwörterbuch,\n\n zur Erklärung aller aus fremden Sprachen ent=\n\n lehnten Wörter und Ausdrücke, welche in den\n\n Künsten und Wissenschaften, im Handel und\n\n Verkehr vorkommen, nebst einem Anhange von\n\n Eigennamen, mit Bezeichnung der Aussprache\n\n bearbeitet von\n\n Dr. J. H. Kaltschmidt.\n\n \n\n Jn 10 Heften zu 8 Ngr\n\n \n\n Leipzig, bei F. A. Brockhaus.\n\n \n\nHerausgegeben unter Verantwortlichkeit der Verlagshandlung F. A. Brockhaus in Leipzig\n\nDas Pfennig=Magazin\n\n für\n\n Belehrung und Unterhaltung",
+                                "l": "(Beschluß folgt in Nr. 12.)\n\n \n\n Gutes Beispiel.\n\n\n\n Mittel gegen das Nasenbluten.\n\n\n\n Miscellen\n\nLiterarische Anzeige.\n\n \n\n Neuestes und vollständigstes\n\n Fremdwörterbuch,\n\n zur Erklärung aller aus fremden Sprachen ent=\n\n lehnten Wörter und Ausdrücke, welche in den\n\n Künsten und Wissenschaften, im Handel und\n\n Verkehr vorkommen, nebst einem Anhange von\n\n Eigennamen, mit Bezeichnung der Aussprache\n\n bearbeitet von\n\n Dr. J. H. Kaltschmidt.\n\n \n\n Jn 10 Heften zu 8 Ngr\n\n \n\n Leipzig, bei F. A. Brockhaus.\n\n \n\nHerausgegeben unter Verantwortlichkeit der Verlagshandlung F. A. Brockhaus in Leipzig\n\nDas Pfennig=Magazin\n\n für\n\n Belehrung und Unterhaltung"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "de"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Deutsch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "German"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:language - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:language - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value.replace(\"/\",\"–\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:coverage using expression value.replace(\"/\",\"–\")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value.replace(\"-\",\"–\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:coverage using expression value.replace(\"-\",\"–\")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value.replace(\" – \",\"–\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:coverage using expression value.replace(\" – \",\"–\")"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "de"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "en"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "eng"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "de"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "en"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "eng"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:creator - xml:lang",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:creator - xml:lang",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "eng",
+                                "l": "eng"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Leibniz Institute for the German Language, Mannheim, Germany"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "eng"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:creator - xml:lang",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:creator - xml:lang",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "deu",
+                                "l": "deu"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Leibniz-Institut für Deutsche Sprache, Mannheim"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "IDS Mannheim"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:creator - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:creator - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "non-commercial, non-download license, EULA: http://www.ids-mannheim.de/cosmas2/projekt/registrierung/"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "EULA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Institut für Deutsche Sprache"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "IDS Mannheim"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/column-addition",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "baseColumnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "grel:value",
+        "onError": "keep-original",
+        "newColumnName": "type - dcmi recommendation",
+        "columnInsertIndex": 13,
+        "description": "Create column type - dcmi recommendation at index 13 based on column record - metadata - oai_dc:dc - dc:type using expression grel:value"
+    },
+    {
+        "op": "core/column-move",
+        "columnName": "type - dcmi recommendation",
+        "index": 12,
+        "description": "Move column type - dcmi recommendation to position 12"
+    },
+    {
+        "op": "core/column-move",
+        "columnName": "type - dcmi recommendation",
+        "index": 7,
+        "description": "Move column type - dcmi recommendation to position 7"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:type",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:type",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "dictionary",
+                                "l": "dictionary"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "dictionary"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:type",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:type",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "geschrieben",
+                                "l": "geschrieben"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "geschrieben"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:type",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:type",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "geschrieben",
+                                "l": "geschrieben"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "historisches wörterbuch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:type",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:type",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "geschrieben",
+                                "l": "geschrieben"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "monolingual dictionary"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:type",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:type",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "geschrieben",
+                                "l": "geschrieben"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "written"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/blank-down",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:type",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:type",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "geschrieben",
+                                "l": "geschrieben"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "description": "Blank down cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/column-split",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:format",
+        "guessCellType": true,
+        "removeOriginalColumn": false,
+        "mode": "separator",
+        "separator": "/",
+        "regex": false,
+        "maxColumns": 0,
+        "description": "Split column record - metadata - oai_dc:dc - dc:format by separator"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:format 1",
+        "newColumnName": "format - IAANA recommendation - mediatype",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:format 1 to format - IAANA recommendation - mediatype"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:format 2",
+        "newColumnName": "format - IAANA recommendation - subtype",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:format 2 to format - IAANA recommendation - subtype"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:title - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:title - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:title using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:type - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:type - xml:lang"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:description - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:description - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Mannichfaltiges Ankündigungen Verantwortlicher R??edacteur: M. J. E. Volbeding. Druck und Verlag von F. A. Brockhaus in Leipzig. Das Pfennig=Magazin für Belehrung und Unterhaltung",
+                    "Mannichfaltiges Ankündigungen Verantwortlicher Redacteur: M. J. E. Volbeding. Druck und Verlag von F. A. Brockhaus in Leipzig Das Pfennig=Magazin für Belehrung und Unterhaltung",
+                    "Mannichfaltiges Ankündigungen Verantwortlicher Redacteur: M. J. E. Volbeding. Druck und Verlag von F. A. Brockhaus in Leipzig. Das Pfennig=Magazin für Belehrung und Unterhaltung"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Mannichfaltiges Ankündigungen Verantwortlicher Redacteur: M. J. E. Volbeding. Druck und Verlag von F. A. Brockhaus in Leipzig Das Pfennig=Magazin für Belehrung und Unterhaltung"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Sonntags=Blatt für Jedermann aus dem Volke. Begründet von Otto Ruppius. Herausgegeben von Erscheint jeden Sonntag. Preis bei allen Postämtern vierteljährlich 9 Sgr., bei allen Buchhandlungen und Zeitungs=Spediteuren vierteljährlich 9 Sgr., wöchentlich 9 Pf. frei ins Haus; beim Selbstabholen aus der Expedition des Sonntags=Blattes (Taubenstraße Nr. 27) kostet die Nummer nur 6 Pf. Posthuma. Eine friesische Novelle von Wilhelm Jensen. (Fortsetzung.)",
+                    "Sonntags=Blatt für Jedermann aus dem Volke. Begründet von Otto Ruppius. Herausgegeben von Erscheint jeden Sonntag. Preis bei allen Postämtern vierteljährlich 9 Sgr., bei allen Buchhandlungen und Zeitungs=Spediteuren vierteljährlich 9 Sgr., wöchentlich 9 Pf. frei ins Haus beim Selbstabholen aus der Expedition des Sonntags=Blattes (Taubenstraße Nr. 27) kostet die Nummer nur 6 Pf. Posthuma. Eine friesische Novelle von Wilhelm Jensen. (Fortsetzung.)",
+                    "Sonntags=Blatt für Jedermann aus dem Volke. Begründet von Otto Ruppius. Herausgegeben von Erscheint jeden Sonntag. Preis bei allen Postämtern vierteljährlich 9 Sgr., bei allen Buchhandlungen und Zeitungs=Spediteuren vierteljährlich 9 Sgr., wöchentlich 9 Pf. frei ins Haus. Beim Selbstabholen aus der Expedition des Sonntags=Blattes (Taubenstraße Nr. 27) kostet die Nummer nur 6 Pf. Posthuma. Eine friesische Novelle von Wilhelm Jensen. (Fortsetzung.)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Sonntags=Blatt für Jedermann aus dem Volke. Begründet von Otto Ruppius. Herausgegeben von Erscheint jeden Sonntag. Preis bei allen Postämtern vierteljährlich 9 Sgr., bei allen Buchhandlungen und Zeitungs=Spediteuren vierteljährlich 9 Sgr., wöchentlich 9 Pf. frei ins Haus. Beim Selbstabholen aus der Expedition des Sonntags=Blattes (Taubenstraße Nr. 27) kostet die Nummer nur 6 Pf. Posthuma. Eine friesische Novelle von Wilhelm Jensen. (Fortsetzung.)"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "*",
+                    "*____*____*"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "NA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Frankreich Schweiz",
+                    "Schweiz. Frankreich."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Frankreich Schweiz"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "EUROPA Wochenschrift für Kultur und Politik.",
+                    "Europa Wochenschrift für Kultur und Politik.",
+                    "Europa Wochenschrift für Kultur und Politik"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Europa Wochenschrift für Kultur und Politik"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Jtalien.",
+                    "Jtalien"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jtalien."
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Vermischte Nachrichten",
+                    "Vermischte Nachrichten."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Vermischte Nachrichten"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Deutschland.",
+                    "Deutschland"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Deutschland"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Morgenblatt für gebildete Leser",
+                    "Morgenblatt für gebildete Leser *____*____*"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Morgenblatt für gebildete Leser"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Frankreich.",
+                    "Frankreich"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Frankreich"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Vermischtes.",
+                    "Vermischtes"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Vermischtes"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Jndustrie, Handel und Verkehr. Neueste Posten",
+                    "Neueste Posten Jndustrie, Handel und Verkehr."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jndustrie, Handel und Verkehr. Neueste Posten"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "England",
+                    "England."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "England"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Jtalien. Frankreich.",
+                    "Frankreich Jtalien"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Frankreich Jtalien"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Sonntags=Blatt für Jedermann aus dem Volke. Begründet von Otto Ruppius. Herausgegeben von Erscheint jeden Sonntag. Preis bei allen Postämtern vierteljährlich 83-4 Sgr., bei allen Buchhandlungen und Zeitungs=Spediteuren vierteljährlich 9 Sgr., wöchentlich 9 Pf. frei ins Haus; beim Selbstabholen aus der Expedition des Sonntags=Blattes (Taubenstraße Nr. 27) kostet die Nummer nur 6 Pf. Zu spät Novelle von Sophie Verena. (Fortsetzung.)",
+                    "Sonntags=Blatt für Jedermann aus dem Volke. Begründet von Otto Ruppius. Herausgegeben von Erscheint jeden Sonntag. Preis bei allen Postämtern vierteljährlich 83/4 Sgr., bei allen Buchhandlungen und Zeitungs=Spediteuren vierteljährlich 9 Sgr., wöchentlich 9 Pf. frei ins Haus; beim Selbstabholen aus der Expedition des Sonntags=Blattes (Taubenstraße Nr. 27) kostet die Nummer nur 6 Pf. Zu spät Novelle von Sophie Verena. (Fortsetzung.)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Sonntags=Blatt für Jedermann aus dem Volke. Begründet von Otto Ruppius. Herausgegeben von Erscheint jeden Sonntag. Preis bei allen Postämtern vierteljährlich 83/4 Sgr., bei allen Buchhandlungen und Zeitungs=Spediteuren vierteljährlich 9 Sgr., wöchentlich 9 Pf. frei ins Haus; beim Selbstabholen aus der Expedition des Sonntags=Blattes (Taubenstraße Nr. 27) kostet die Nummer nur 6 Pf. Zu spät Novelle von Sophie Verena. (Fortsetzung.)"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Die Bayerische Presse. Abonnement: Deutschland",
+                    "Die Bayerische Presse. Abonnement: Deutschland."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Die Bayerische Presse. Abonnement: Deutschland"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Lose Blätter Briefkasten Druck und Verlag von Franz Duncker in Berlin. Verantwortlicher Redakteur: Ernst Dohm in Berlin.",
+                    "Lose Blätter Briefkasten Druck und Verlag von Franz Duncker in Berlin. Verantwortlicher Redakteur: Ernst Dohm in Berlin"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Lose Blätter Briefkasten Druck und Verlag von Franz Duncker in Berlin. Verantwortlicher Redakteur: Ernst Dohm in Berlin."
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Der „Arbeitgeber“ erscheint wöchentlich, Preis: 1/4jährlich Mk. 2.40, mit Postporto Mk. 3. glichen werden Verlag des „Arbeitgeber“ Hochstraße Nr. 37. Der Arbeitgeber. Archiv für Volkswirthschaft und neue Erfindungen, Central - Anzeiger für den Arbeitmarkt. Bestellungen werden von allen Postämtern u. Buchhandlun= gen angenommen. Das Patent= und Maschinen= Geschäft des „Arbeitgeber“ übernimmt die Ausführung neuer Erfindungen, vermittelt den Ankauf (zum Fabrik= preis) und Verkauf von Ma= schinen aller Art, es besorgt Patente für alle Länder und übernimmt deren Ver= werthung.",
+                    "Der „Arbeitgeber“ erscheint wöchentlich, Preis: 1/4jährlich Mk. 2.40, mit Postporto Mk. 3. glichen werden Verlag des „Arbeitgeber“ Hochstraße Nr. 37. Der Arbeitgeber. Archiv für Volkswirthschaft und neue Erfindungen, Central - Anzeiger für den Arbeitmarkt. Bestellungen werden von allen Postämtern u. Buchhandlun= gen angenommen. Das Patent= und Maschinen= Geschäft des „Arbeitgeber“ übernimmt die Ausführung neuer Erfindungen, vermittelt den Ankauf (zum Fabrik= preis) und Verkauf von Ma= schinen aller Art, es besorgt?? Patente für alle?? Länder und übernimmt deren Ver= werthung."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Der „Arbeitgeber“ erscheint wöchentlich, Preis: 1/4jährlich Mk. 2.40, mit Postporto Mk. 3. glichen werden Verlag des „Arbeitgeber“ Hochstraße Nr. 37. Der Arbeitgeber. Archiv für Volkswirthschaft und neue Erfindungen, Central - Anzeiger für den Arbeitmarkt. Bestellungen werden von allen Postämtern u. Buchhandlun= gen angenommen. Das Patent= und Maschinen= Geschäft des „Arbeitgeber“ übernimmt die Ausführung neuer Erfindungen, vermittelt den Ankauf (zum Fabrik= preis) und Verkauf von Ma= schinen aller Art, es besorgt Patente für alle Länder und übernimmt deren Ver= werthung."
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Stereotypie, Druck und Verlag von Gottlieb Haase Söhne in Prag. Redaction von W. A. Gerle.",
+                    "Stereotypie, Druck und Verlag von Gottlieb Haase Söhne in Prag Redaction von W. A. Gerle"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Stereotypie, Druck und Verlag von Gottlieb Haase Söhne in Prag Redaction von W. A. Gerle"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Der „Arbeitgeber“ erscheint wöchentlich, Preis: 1/4jährlich Mk. 2.40, mit Postporto Mk. 3. glichen werden Verlag des „Arbeitgeber“ Hochstraße Nr. 37. Der Arbeitgeber. Archiv für Volkswirthschaft und neue Erfindungen, Central - Anzeiger für den Arbeitmarkt. Bestellungen werden von allen Postämtern u. Buchhandlun= gen angenommen. Das Patent= und Maschinen= Geschäft des „Arbeitgeber“ übernimmt die Ausführung neuer Erfindungen, vermittelt den Ankauf (zum Fabrik= preis) und Verkauf von Ma= schinen aller Art, es besorgt Patente für alle Länder und übernimmt deren Ver= werthung.",
+                    "Der „Arbeitgeber“ erscheint wöchentlich, Preis: 1/4jährlich Mk. 2.40, mit Postporto Mk. 3. glichen werden Verlag des „Arbeitgeber“ Hochstraße Nr. 37. Der Arbeitgeber. Archiv für Volkswirthschaft und neue Erfindungen, Central-Anzeiger für den Arbeitmarkt. Bestellungen werden von allen Postämtern u. Buchhandlun= gen angenommen. Das Patent= und Maschinen= Geschäft des „Arbeitgeber“ übernimmt die Ausführung neuer Erfindungen, vermittelt den Ankauf (zum Fabrik= preis) und Verkauf von Ma= schinen aller Art, es besorgt Patente für alle Länder und übernimmt deren Ver= werthung.",
+                    "Der „Arbeitgeber“ erscheint wöchentlich, Preis: 1/4jährlich Mk. 2. 40, mit Postporto Mk. 3. glichen werden Verlag des „Arbeitgeber“ Hochstraße Nr. 37. Der Arbeitgeber. Archiv für Volkswirthschaft und neue Erfindungen, Central - Anzeiger für den Arbeitmarkt. Bestellungen werden von allen Postämtern u. Buchhandlun= gen angenommen. Das Patent= und Maschinen= Geschäft des „Arbeitgeber“ übernimmt die Ausführung neuer Erfindungen, vermittelt den Ankauf (zum Fabrik= preis) und Verkauf von Ma= schinen aller Art, es besorgt Patente für alle Länder und übernimmt deren Ver= werthung."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Der „Arbeitgeber“ erscheint wöchentlich, Preis: 1/4jährlich Mk. 2.40, mit Postporto Mk. 3. glichen werden Verlag des „Arbeitgeber“ Hochstraße Nr. 37. Der Arbeitgeber. Archiv für Volkswirthschaft und neue Erfindungen, Central - Anzeiger für den Arbeitmarkt. Bestellungen werden von allen Postämtern u. Buchhandlun= gen angenommen. Das Patent= und Maschinen= Geschäft des „Arbeitgeber“ übernimmt die Ausführung neuer Erfindungen, vermittelt den Ankauf (zum Fabrik= preis) und Verkauf von Ma= schinen aller Art, es besorgt Patente für alle Länder und übernimmt deren Ver= werthung."
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.trim()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "~1950–2007"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "1950–2007"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:coverage"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:subject - xml:lang"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - header - datestamp",
+        "newColumnName": "datestamp",
+        "description": "Rename column record - header - datestamp to datestamp"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:creator",
+        "newColumnName": "creator",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:creator to creator"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:language",
+        "newColumnName": "language",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:language to language"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:identifier",
+        "newColumnName": "identifier",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:identifier to identifier"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:title",
+        "newColumnName": "title",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:title to title"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:description",
+        "newColumnName": "description",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:description to description"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "newColumnName": "publisher",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:publisher to publisher"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:type",
+        "newColumnName": "type",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:type to type"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:format",
+        "newColumnName": "format",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:format to format"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:subject",
+        "newColumnName": "subject",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:subject to subject"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:rights",
+        "newColumnName": "rights",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:rights to rights"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "newColumnName": "coverage",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:coverage to coverage"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - header - identifier",
+        "newColumnName": "record id",
+        "description": "Rename column record - header - identifier to record id"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "format - IAANA recommendation - mediatype",
+        "newColumnName": "format - mediatype",
+        "description": "Rename column format - IAANA recommendation - mediatype to format - mediatype"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "format - IAANA recommendation - subtype",
+        "newColumnName": "format - subtype",
+        "description": "Rename column format - IAANA recommendation - subtype to format - subtype"
+    }
+]

@@ -1,0 +1,3387 @@
+[
+    {
+        "op": "core/column-move",
+        "columnName": "record - header - datestamp",
+        "index": 0,
+        "description": "Move column record - header - datestamp to position 0"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - xsi:schemaLocation",
+        "description": "Remove column record - metadata - oai_dc:dc - xsi:schemaLocation"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - header - datestamp",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - header - datestamp using expression value.toDate()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:date using expression value.toDate()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "de"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "en"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "eng"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:subject using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Written Corpus",
+                    "written corpus"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Written Corpus"
+            },
+            {
+                "from": [
+                    "Spoken Language",
+                    "spoken language"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Spoken Language"
+            },
+            {
+                "from": [
+                    "Language change",
+                    "language change"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Language change"
+            },
+            {
+                "from": [
+                    "Kurort",
+                    "kurort"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Kurort"
+            },
+            {
+                "from": [
+                    "Polska - 18 w.",
+                    "Polska 18 w."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Polska - 18 w."
+            },
+            {
+                "from": [
+                    "Oczko W.",
+                    "Oczko, W."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Oczko, W."
+            },
+            {
+                "from": [
+                    "parallel corpus",
+                    "Parallel corpus"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Parallel corpus"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value.toLowercase()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:subject using expression value.toLowercase()"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:subject - xml:lang"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:relation - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:relation - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:relation",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:relation using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:relation",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:relation using expression value.trim()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:relation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Lapshinova-Koltunski, Ekaterina. 2013. VARTRA: A Comparable Corpus for Analysis of Translation Variation. In Proceedings of the Sixth Workshop on Building and Using Comparable Corpora. Sofia, Bulgaria. Association for Computational Linguistics. pp. 77-86. URL: http://aclweb.org/anthology/W13-2510",
+                    "Lapshinova-Koltunski, Ekaterina. (2013). VARTRA: A Comparable Corpus for Analysis of Translation Variation. In Proceedings of the Sixth Workshop on Building and Using Comparable Corpora. Sofia, Bulgaria. Association for Computational Linguistics. pp. 77-86. URL: http://aclweb.org/anthology/W13-2510"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Lapshinova-Koltunski, Ekaterina. 2013. VARTRA: A Comparable Corpus for Analysis of Translation Variation. In Proceedings of the Sixth Workshop on Building and Using Comparable Corpora. Sofia, Bulgaria. Association for Computational Linguistics. pp. 77-86. URL: http://aclweb.org/anthology/W13-2510"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:relation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY 4.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY "
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY-NC-SA 4.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY-NC-SA "
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY-SA 3.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY-SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY-SA 4.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY-SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC 0"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC-BY 3.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC-BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Creative Commons Attribution-NonCommercial 3.0 Unported License"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Creative Commons-Lizenz Namensnennung 4.0 International (CC BY 4.0)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY 4.0"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CreativeCommons Attribution 4.0 International (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CreativeCommons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0), https://creativecommons.org/licenses/by-nd/4.0/"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY ND"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Die Textdigitalisate des Polytechnischen Journals stehen unter der Creative-Commons-Lizenz CC BY-SA 4.0."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY-SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dieser Werk steht unter der Lizenz „Namensnennung - Weitergabe unter gleichen Bedingungen 2.0 Deutschland (CC BY-SA 2.0 DE)“."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY-SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dieses Werk steht unter der \"Creative Commmons Namensnennung - Nicht kommerziell 3.0 Deutschland Lizenz\" (CC BY-NC)."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY-NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dieses Werk steht unter der \"Creative Commons Lizenz\" (CC BY-NC)."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY-NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dieses Werk steht unter der \"Creative Commons Namensnennung - Nicht kommerziell 3.0 Deutschland Lizenz\" (CC BY-NC)."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY-NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:rights",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:rights",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "Dieses Werk steht unter der „Creative Commons Namensnennung - Nicht kommerziell 3.0 Deutschland Lizenz“ (CC BY-NC).",
+                                "l": "Dieses Werk steht unter der „Creative Commons Namensnennung - Nicht kommerziell 3.0 Deutschland Lizenz“ (CC BY-NC)."
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.replace(\"Dieses Werk steht unter der „Creative Commons Namensnennung\",\" \")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.replace(\"Dieses Werk steht unter der „Creative Commons Namensnennung\",\" \")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.replace(\"- \",\" \")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.replace(\"- \",\" \")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.replace(\"-\",\" \")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.replace(\"-\",\" \")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.replace(\"Dieses Werk steht unter der \\\"Creative Commons Namensnennung  Nicht kommerziell 3.0 Deutschland Lizenz\\\"\",\" \")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.replace(\"Dieses Werk steht unter der \\\"Creative Commons Namensnennung  Nicht kommerziell 3.0 Deutschland Lizenz\\\"\",\" \")"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dieses Werk steht unter der \"Creative Commons Namensnennung Nicht kommerziell 3.0 Deutschland Lizenz\" (CC BY NC)."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dieses Werk steht unter der „Creative Commons Namensnennung Weitergabe unter gleichen Bedingungen 3.0 Deutschland Lizenz“ (CC BY SA)."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dieses Werk steht unter der Lizenz „Namensnennung  Weitergabe unter gleichen Bedingungen 2.0 Deutschland (CC BY SA 2.0 DE)“."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY SA 2.0 DE"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dieses Werk steht unter der Lizenz „Namensnennung Nicht kommerziell 3.0 Deutschland (CC BY NC 3.0 DE)“."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution NonCommercial 3.0\n                            Unported (German) License."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution NonCommercial 3.0 Generic (German) License."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution NonCommercial 3.0 German License."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution NonCommercial 3.0 Unported\n                     (German) License."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution NonCommercial 3.0 Unported (CC BY NC 3.0) license."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution NonCommercial 3.0 Unported (German) License."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution NonCommercial 3.0 Unported License."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution NonCommercial 4.0 International (CC BY 4.0)."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution ShareAlike 2.0 Generic (German) License."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution ShareAlike 3.0 (German) License."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution ShareAlike 3.0 Generic (German) License."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution ShareAlike 3.0 Unported (German) License."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution ShareAlike 4.0 International\n              license."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution ShareAlike 4.0 International (CC BY SA 4.0) License."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution ShareAlike 4.0 International license"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution ShareAlike 4.0 International license."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution ShareAlike 4.0 Unported (German) License."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "http://creativecommons.org/publicdomain/mark/1.0/"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "pulbic domain"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 International (CC BY SA 4.0)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:rights",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:rights",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "unbeschränkte Online Nutzung",
+                                "l": "unbeschränkte Online Nutzung"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.replace(\"(\",\" \")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.replace(\"(\",\" \")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.replace(\"(\",\" \")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.replace(\"(\",\" \")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.replace(\").\",\" \")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.replace(\").\",\" \")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.replace(\".\",\" \")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.replace(\".\",\" \")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.replace(\")\",\" \")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.replace(\")\",\" \")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY SA 2 0 DE"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY 4 0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dieses Werk ist gemeinfrei"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "public domain"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dieses Werk ist gemeinfrei Mit freundlicher Genehmigung der Internetloge"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "public domain"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dieses Werk ist gemeinfrei You may use this digital text for scholary, private and non profit purposes only Make sure that you do not violate the copyright laws of your country"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Project Gutenberg License"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Project Gutenberg License"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Namensnennung 4 0 International CC BY 4 0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Namensnennung 4 0 International CC BY 4 0 Attribution: Dr Rudolf Brandmeyer, Universität Duisburg Essen Fakultät für Geisteswissenschaften / Germanistik; Projekt Lyriktheorie via Deutsches Textarchiv"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Nicht kommerziell 3 0 Deutschland Lizenz“ CC BY NC"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Nicht urheberrechtlich geschützt; keine kommerzielle Nachnutzung"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "pulbic domain"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "public domain"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Distributed under the Creative Commons Attribution 3 0 Unported License"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY NC SA 4 0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://creativecommons org/licenses/by nc sa/4 0/"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC SA "
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY SA NC 4 0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NA SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY NA SA"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:rights",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:rights",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "The newspaper texts in the corpus are copyright © by Erkin Too, the state official newspaper of the Kyrgyz Republic They are licenced for strictly non commercial use under the condition that the copyright owner is acknowledged with a full citation The other texts are licenced from Bizdin Muras Foundation for non commercial use with author attribution",
+                                "l": "The newspaper texts in the corpus are copyright © by Erkin Too, the state official newspaper of the Kyrgyz Republic They are licenced for strictly non commercial use under the condition that the copyright owner is acknowledged with a full citation The other texts are licenced from Bizdin Muras Foundation for non commercial use with author attribution"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "The newspaper texts in the corpus are copyright © by Erkin Too, the state official newspaper of the Kyrgyz Republic They are licenced for strictly non commercial use under the condition that the copyright owner is acknowledged with a full citation The other texts are licenced from Bizdin Muras Foundation for non commercial use with author attribution"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "© Erkin Too, non-commercial, full citation "
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY NC SA",
+                    "CC BY NC SA "
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Creative Commons Attribution NonCommercial ShareAlike 4 0 International License"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC NC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY NC ND 4 0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC ND"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "The SaCoCo Diachronic Corpus as a whole is released under a Creative Commons Attribution Non Commercial Share Alike 3 0 Unported License CC BY NC SA 3 0 http://creativecommons org/licenses/by nc sa/3 0/"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "The SaCoCo Contemporary Corpus is released under a Creative Commons Attribution Share Alike 3 0 Unported License CC BY SA 3 0 http://creativecommons org/licenses/by sa/3 0/"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "The recipes belonging to Knopf 1800, Franckfurt 1789 and Gräz 1686 contained in the SaCoCo Historical Corpus are released under a Creative Commons Attribution Non Commercial Share Alike 3 0 Unported License CC BY NC SA 3 0 http://creativecommons org/licenses/by nc sa/3 0/"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "BY NC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "SALSA license agreement: http://www coli uni saarland de/projects/salsa/corpus/doc/license html"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "SALSA license agreement"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Free for non commercial academic use"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Free for: non-commercial academic use"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Creative Commons Attribution 3 0 Unported CC BY 3 0 http://creativecommons org/licenses/by/3 0/"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Copyrighted, License: http://www coli uni saarland de/projects/salsa/salto/doc/license html"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "www.coli.uni-saarland.de/projects/salsa/salto/doc/license.html"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "BY NC SA"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Academics: free"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Free for academical use"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:rights",
+                    "columnName": "record - metadata - oai_dc:dc - dc:rights",
+                    "query": "acade",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Free for academical use"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Free for: academic use"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Free to: Share, Adapt; Terms: Attribution, NonCommercial, ShareAlike, no additional restrictions"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Free to: share, adapt; terms: attribution, non-commercial, shareAlike, no additional restrictions"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Free for: academic use"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "academic use"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Free for: non-commercial academic use"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "non-commercial academic use"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Free to: share, adapt; terms: attribution, non-commercial, shareAlike, no additional restrictions"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "share, adapt; terms: attribution, non-commercial, share alike, no additional restrictions"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:rights - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:rights - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:contributor",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:contributor using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:contributor",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:contributor using expression value.trim()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:contributor",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "José Manuel Martínez Martínez",
+                    "Jose Manuel Martinez Martinez"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jose Manuel Martinez Martinez"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:contributor"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:contributor - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:contributor - xml:lang"
+    },
+    {
+        "op": "core/column-addition",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "baseColumnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "grel:value",
+        "onError": "keep-original",
+        "newColumnName": "type - dcmi recommendation",
+        "columnInsertIndex": 13,
+        "description": "Create column type - dcmi recommendation at index 13 based on column record - metadata - oai_dc:dc - dc:type using expression grel:value"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value.toLowercase()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:type using expression value.toLowercase()"
+    },
+    {
+        "op": "core/column-move",
+        "columnName": "type - dcmi recommendation",
+        "index": 12,
+        "description": "Move column type - dcmi recommendation to position 12"
+    },
+    {
+        "op": "core/column-move",
+        "columnName": "type - dcmi recommendation",
+        "index": 8,
+        "description": "Move column type - dcmi recommendation to position 8"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value.toLowercase()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column type - dcmi recommendation using expression value.toLowercase()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "corpus"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "corpus of proceedings of the european parliament"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "diachronic corpus"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "early book"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "early printed book (1501-1800)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "gazeta"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "książka"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "text collection"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "treebank"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "written corpus"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "stary druk"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "starodruk"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "spoken text"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "audio"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "audio"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "sound"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "newspaper corpus"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "alter druck"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:type - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:type - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.replace(\"- \",\"-\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.replace(\"- \",\"-\")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.replace(\" -\",\"-\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.replace(\" -\",\"-\")"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:description - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:description - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:source",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:source using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:source",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:source using expression value.trim()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:source",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Pol. 7. II. 303",
+                    "Pol.7.II.303"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Pol. 7. II. 303"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:source"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:source - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:source - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:title using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:title using expression value.trim()"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:title - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:title - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Jezierski, Franciszek Salezy (1740-1791)",
+                    "Jezierski, Franciszek Salezy"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jezierski, Franciszek Salezy (1740-1791)"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Jörg Knappen, Sprachwissenschaft und Sprachtechnologie, UNiversität des Saarlandes, Saarbrücken",
+                    "Jörg Knappen, Sprachwissenschaft und Sprachtechnologie, Universität des Saarlandes"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jörg Knappen, Sprachwissenschaft und Sprachtechnologie, Universität des Saarlandes"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:creator - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:creator - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value.replace(\"[\",\" \")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:date using expression value.replace(\"[\",\" \")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "timerange",
+                    "name": "record - metadata - oai_dc:dc - dc:date",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:date",
+                    "from": -12717475200000,
+                    "to": 1,
+                    "selectTime": true,
+                    "selectNonTime": true,
+                    "selectBlank": true,
+                    "selectError": true
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value.replace(\"]\",\" \")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:date using expression value.replace(\"]\",\" \")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "timerange",
+                    "name": "record - metadata - oai_dc:dc - dc:date",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:date",
+                    "from": -12717475200000,
+                    "to": 1,
+                    "selectTime": true,
+                    "selectNonTime": true,
+                    "selectBlank": true,
+                    "selectError": true
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:date using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "timerange",
+                    "name": "record - metadata - oai_dc:dc - dc:date",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:date",
+                    "from": -12717475200000,
+                    "to": 1,
+                    "selectTime": true,
+                    "selectNonTime": true,
+                    "selectBlank": true,
+                    "selectError": true
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:date using expression value.toDate()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:date",
+                    "columnName": "record - metadata - oai_dc:dc - dc:date",
+                    "query": "/",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "2006-10/2009-09"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "2006-10–2009-09"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:date"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:date",
+                    "columnName": "record - metadata - oai_dc:dc - dc:date",
+                    "query": "/",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "2011/2014"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "2011–2014"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:date"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:date",
+                    "columnName": "record - metadata - oai_dc:dc - dc:date",
+                    "query": "/",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "2013/2014"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "2013–2014"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:date"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:date",
+                    "columnName": "record - metadata - oai_dc:dc - dc:date",
+                    "query": "/",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "2020/2021"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "2020–2021"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:date"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:date using expression value.toDate()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "ca 1764"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "1764"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:date"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "ca 1766"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "1766"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:date"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "post 20 VIII 1775"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "1775"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:date"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:date using expression value.toDate()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "14.03.1744"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "1744-03-14"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:date"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:date",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:date",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "1744-03-14",
+                                "l": "1744-03-14"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:date using expression value.toDate()"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:date - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:date - xml:lang"
+    },
+    {
+        "op": "core/column-split",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:format",
+        "guessCellType": true,
+        "removeOriginalColumn": false,
+        "mode": "separator",
+        "separator": "/",
+        "regex": false,
+        "maxColumns": 0,
+        "description": "Split column record - metadata - oai_dc:dc - dc:format by separator"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:format 1",
+        "newColumnName": "format - IAANA recommendation - mediatype",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:format 1 to format - IAANA recommendation - mediatype"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:format 2",
+        "newColumnName": "format - IAANA recommendation - subtype",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:format 2 to format - IAANA recommendation - subtype"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "s.n.",
+                    "[s.n.]"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "s.n."
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "s.n.",
+                    "[S. n.]"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "s.n."
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Humboldt-Universität zu Berlin, Institut für Slawistik, Prof. Dr. Roland Meyer"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "HU Berlin, Institut für Slawistik, Prof. Dr. Roland Meyer"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Humboldt-Universität zu Berlin; Institut für Slawistik; Prof. Dr. Roland Meyer, Paul Burzlaff"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "HU Berlin; Institut für Slawistik; Prof. Dr. Roland Meyer, Paul Burzlaff"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:publisher",
+                    "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+                    "query": "",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Lehrstuhl Englische Sprach- und Übersetzungswissenschaft, Fakultät P, Fachrichtung Sprachwissenschaft und Sprachtechnologie, Universität des Saarlandes, Campus A2.2, 66123 Saarbrücken, Germany"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "uds, Lehrstuhl Englische Sprach- und Übersetzungswissenschaft, Fakultät P, Fachrichtung Sprachwissenschaft und Sprachtechnologie"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:publisher - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value.replace(\"/\",\"–\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:coverage using expression value.replace(\"/\",\"–\")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value.replace(\"-\",\"–\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:coverage using expression value.replace(\"-\",\"–\")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value.replace(\" – \",\"–\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:coverage using expression value.replace(\" – \",\"–\")"
+    },
+    {
+        "op": "core/multivalued-cell-split",
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "keyColumnName": "record - header - datestamp",
+        "mode": "separator",
+        "separator": ",",
+        "regex": false,
+        "description": "Split multi-valued cells in column record - metadata - oai_dc:dc - dc:coverage"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:coverage using expression value.trim()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Austria and Switzerland."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Austria, Switzerland"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:coverage"
+    },
+    {
+        "op": "core/multivalued-cell-split",
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "keyColumnName": "record - header - datestamp",
+        "mode": "separator",
+        "separator": ",",
+        "regex": false,
+        "description": "Split multi-valued cells in column record - metadata - oai_dc:dc - dc:coverage"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:coverage using expression value.trim()"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:coverage - xml:lang"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - header - datestamp",
+        "newColumnName": "datestamp",
+        "description": "Rename column record - header - datestamp to datestamp"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:creator",
+        "newColumnName": "creator",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:creator to creator"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:language",
+        "newColumnName": "language",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:language to language"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:identifier",
+        "newColumnName": "identifier",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:identifier to identifier"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:title",
+        "newColumnName": "title",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:title to title"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:description",
+        "newColumnName": "description",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:description to description"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:date",
+        "newColumnName": "date",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:date to date"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "newColumnName": "publisher",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:publisher to publisher"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:type",
+        "newColumnName": "type",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:type to type"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:format",
+        "newColumnName": "format",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:format to format"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:subject",
+        "newColumnName": "subject",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:subject to subject"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:source",
+        "newColumnName": "source",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:source to source"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:rights",
+        "newColumnName": "rights",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:rights to rights"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:relation",
+        "newColumnName": "relation",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:relation to relation"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:contributor",
+        "newColumnName": "contributor",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:contributor to contributor"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "newColumnName": "coverage",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:coverage to coverage"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - header - identifier",
+        "newColumnName": "record id",
+        "description": "Rename column record - header - identifier to record id"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "format - IAANA recommendation - mediatype",
+        "newColumnName": "format - mediatype",
+        "description": "Rename column format - IAANA recommendation - mediatype to format - mediatype"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "format - IAANA recommendation - subtype",
+        "newColumnName": "format - subtype",
+        "description": "Rename column format - IAANA recommendation - subtype to format - subtype"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "2006-10–2009-09"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "2006-10/2009-09"
+            }
+        ],
+        "description": "Mass edit cells in column date"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "2011–2014"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "2011/2014"
+            }
+        ],
+        "description": "Mass edit cells in column date"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "2013-2014"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "2013/2014"
+            }
+        ],
+        "description": "Mass edit cells in column date"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "2013–2014"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "2013/2014"
+            }
+        ],
+        "description": "Mass edit cells in column date"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "date",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "2020–2021"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "2020/2021"
+            }
+        ],
+        "description": "Mass edit cells in column date"
+    },
+    {
+        "op": "core/multivalued-cell-split",
+        "columnName": "date",
+        "keyColumnName": "datestamp",
+        "mode": "separator",
+        "separator": "/",
+        "regex": false,
+        "description": "Split multi-valued cells in column date"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "date",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column date using expression value.toDate()"
+    }
+]

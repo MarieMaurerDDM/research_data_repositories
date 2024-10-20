@@ -1,0 +1,731 @@
+[
+    {
+        "op": "core/column-move",
+        "columnName": "record - header - datestamp",
+        "index": 0,
+        "description": "Move column record - header - datestamp to position 0"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "File",
+        "description": "Remove column File"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - xsi:schemaLocation",
+        "description": "Remove column record - metadata - oai_dc:dc - xsi:schemaLocation"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - header - datestamp",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - header - datestamp using expression value.toDate()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Bavarian Archive for Speech Signals, Ludwig-Maximilians-Universitaet Muenchen"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Bavarian Archive for Speech Signals"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Bavarian Archive for Speech Signals (BAS)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "BAS"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Bavarian Archive for Speech Signals"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "BAS"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Bavarian Archive for Speech Signals, Ludwig-Maximilians-Universität München"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "BAS"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Bavarian Archive for Speech Signals, University of Munich, Siemens Company Munich"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "BAS"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Institut für deutsche Sprache, R5 6-13, 68161 Mannheim"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "IDS Mannheim"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dr. Stephan Luecke"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Dr. Stephan Lücke"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:date using expression value.toDate()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:format",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:format using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.trim()"
+    },
+    {
+        "op": "core/column-split",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:format",
+        "guessCellType": true,
+        "removeOriginalColumn": false,
+        "mode": "separator",
+        "separator": "/",
+        "regex": false,
+        "maxColumns": 0,
+        "description": "Split column record - metadata - oai_dc:dc - dc:format by separator"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:format 1",
+        "newColumnName": "format - IAANA recommendation - mediatype",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:format 1 to format - IAANA recommendation - mediatype"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:format 2",
+        "newColumnName": "format - IAANA recommendation - subtype",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:format 2 to format - IAANA recommendation - subtype"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value.toLowercase()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:type using expression value.toLowercase()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:description",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:description",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "recording of a telephone call (1 speaker) over public phone lines with spontaneous speech answering the question: what did you do during the last hour?",
+                                "l": "recording of a telephone call (1 speaker) over public phone lines with spontaneous speech answering the question: what did you do during the last hour?"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:description",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:description",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "recording of a telephone call (1 speaker) over public phone lines with spontaneous speech answering the question: what did you do during the last hour?",
+                                "l": "recording of a telephone call (1 speaker) over public phone lines with spontaneous speech answering the question: what did you do during the last hour?"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:description",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:description",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "This recording session is part of the speaker verification corpus BAS VERIF1DE. It contains recordings of one telephone call (1 speaker) over public phone lines with read speech, reading SpeechDat prompts items from a prompt sheet",
+                                "l": "This recording session is part of the speaker verification corpus BAS VERIF1DE. It contains recordings of one telephone call (1 speaker) over public phone lines with read speech, reading SpeechDat prompts items from a prompt sheet"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:description",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:description",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "This recording session is part of the speaker verification corpus BAS VERIF1DE. It contains recordings of one telephone call (1 speaker) over public phone lines with read speech, reading SpeechDat prompts items from a prompt sheet",
+                                "l": "This recording session is part of the speaker verification corpus BAS VERIF1DE. It contains recordings of one telephone call (1 speaker) over public phone lines with read speech, reading SpeechDat prompts items from a prompt sheet"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:description",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:description",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "two business persons confer about one or several appointments for future meetings",
+                                "l": "two business persons confer about one or several appointments for future meetings"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:description",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:description",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "two business persons confer about one or several appointments for future meetings",
+                                "l": "two business persons confer about one or several appointments for future meetings"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "COALA v2.6.1",
+                    "COALA v2.5.5",
+                    "COALA v2.5.6",
+                    "COALA v2.5.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "COALA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "COALA",
+                    "COALA 2.3.2"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "COALA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Prof. Dr. Thomas Krefeld",
+                    "Prof. Thomas Krefeld"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Prof. Dr. Thomas Krefeld"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/column-addition",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "baseColumnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "grel:value",
+        "onError": "set-to-blank",
+        "newColumnName": "type - dcmi recommendation",
+        "columnInsertIndex": 12,
+        "description": "Create column type - dcmi recommendation at index 12 based on column record - metadata - oai_dc:dc - dc:type using expression grel:value"
+    },
+    {
+        "op": "core/multivalued-cell-split",
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "keyColumnName": "record - header - datestamp",
+        "mode": "separator",
+        "separator": "and",
+        "regex": false,
+        "description": "Split multi-valued cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:publisher",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "Yshai Kalmanovitch ",
+                                "l": "Yshai Kalmanovitch "
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:publisher using expression value.trim()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Institut für Romanische Philologie, Ludwig-Maximilians-Universität München"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Institut für Romanische Philologie, LMU München"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Freie Universität Berlin, Universitätsbibliothek/Center für Digitale Systeme und Lateinamerika-Institut"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "FU Berlin, Universitätsbibliothek/Center für Digitale Systeme und Lateinamerika-Institut"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:publisher using expression value.trim()"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - header - datestamp",
+        "newColumnName": "datestamp",
+        "description": "Rename column record - header - datestamp to datestamp"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:creator",
+        "newColumnName": "creator",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:creator to creator"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:language",
+        "newColumnName": "language",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:language to language"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:identifier",
+        "newColumnName": "identifier",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:identifier to identifier"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:title",
+        "newColumnName": "title",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:title to title"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:description",
+        "newColumnName": "description",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:description to description"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:date",
+        "newColumnName": "date",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:date to date"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "newColumnName": "publisher",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:publisher to publisher"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:type",
+        "newColumnName": "type",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:type to type"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:format",
+        "newColumnName": "format",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:format to format"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "format - IAANA recommendation - mediatype",
+        "newColumnName": "format - mediatype",
+        "description": "Rename column format - IAANA recommendation - mediatype to format - mediatype"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "format - IAANA recommendation - subtype",
+        "newColumnName": "format - subtype",
+        "description": "Rename column format - IAANA recommendation - subtype to format - subtype"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:subject",
+        "newColumnName": "subject",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:subject to subject"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - header - identifier",
+        "newColumnName": "record id",
+        "description": "Rename column record - header - identifier to record id"
+    }
+]

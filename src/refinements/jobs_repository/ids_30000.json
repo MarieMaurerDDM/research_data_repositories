@@ -1,0 +1,2513 @@
+[
+    {
+        "op": "core/column-move",
+        "columnName": "record - header - datestamp",
+        "index": 0,
+        "description": "Move column record - header - datestamp to position 0"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "Archive",
+        "description": "Remove column Archive"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "File",
+        "description": "Remove column File"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - xsi:schemaLocation",
+        "description": "Remove column record - metadata - oai_dc:dc - xsi:schemaLocation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Forschungs- und Lehrkorpus gesprochenes Deutsch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Forschungs- und Lehrkorpus Gesprochenes Deutsch"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:title"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - header - datestamp",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - header - datestamp using expression value.toDate()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "de"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "en"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "eng"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "1. Weltkrieg"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Erster Weltkrieg"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "2. Weltkrieg"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Zweiter Weltkrieg"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:creator",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:creator",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "CLARIN-D curation project ChatCorpus2CLARIN: Michael Beißwenger, Angelika\n\n\t\t\t\tStorrer, Eric Ehrhardt, Axel Herold, Harald Lüngen",
+                                "l": "CLARIN-D curation project ChatCorpus2CLARIN: Michael Beißwenger, Angelika\n\n\t\t\t\tStorrer, Eric Ehrhardt, Axel Herold, Harald Lüngen"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CLARIN-D curation project ChatCorpus2CLARIN: Michael Beißwenger, Angelika\n\n\t\t\t\tStorrer, Eric Ehrhardt, Axel Herold, Harald Lüngen"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CLARIN-D curation project ChatCorpus2CLARIN: Michael Beißwenger, Angelika Storrer, Eric Ehrhardt, Axel Herold, Harald Lüngen"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "eng",
+                                "l": "eng"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Aging"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "eng",
+                                "l": "eng"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Spoken Language"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Gesprochene Sprache"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "eng",
+                                "l": "eng"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "historical corpus"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "eng",
+                                "l": "eng"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "newspaper"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "eng"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Afrikaans"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "afr"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Amharic"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "amh"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:language",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:language",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "Arabic",
+                                "l": "Arabic"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Arabic"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ara"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Arabic, Standard"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ara"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Arabisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ara"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Bengali"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ben"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Bulgarian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "bul"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Bulgarisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "bul"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Chinese"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "zho"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Chinesisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "zho"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Chinese, Mandarin"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "cmn"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Chinesisch, Mandarin"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "cmn"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Croatian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "hrv"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Czech"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ces"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Tschechisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ces"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dänisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "dan"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Danish"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "dan"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Deutsch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Dutch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "nld"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "en"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "eng"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Englisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "eng"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "English"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "eng"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Ede Idaca"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "idd"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Estonian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "est"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Ethiopian Sign Language"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "eth"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Französisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "fra"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "French"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "fra"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "German"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "German, Standard"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Fon"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "fon"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Greek"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ell"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Griechisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ell"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Hebräisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "heb"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Hebrew"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "heb"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Hebrew, Ancient"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "hbo"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Hungarian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "hun"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Icelandic"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "isl"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Igbo"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ibo"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Indonesian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ind"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Italian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ita"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Italienisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ita"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Japanese"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "jpn"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Japanisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "jpn"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Kazakh"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "kaz"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Latein"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "lat"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Latin"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "lat"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Latvian, Standard"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "lav"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Lettisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "lav"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Lithuanian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "lit"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Ndolo"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ndl"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Niederländisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "nld"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Norwegian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "nor"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Persian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "fas"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Polish"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "pol"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Polnisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "pol"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Portugiesisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "por"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Portuguese"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "por"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Pushto"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "pus"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Romanian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ron"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Russian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "rus"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Russisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "rus"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Schwedisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "swe"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Swedish"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "swe"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Spanisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "spa"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Spanish"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "spa"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Swahili"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "swa"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Tagalog"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "tgl"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Türkisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "tur"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Turkish"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "tur"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Ukrainian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ukr"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Ukrainisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ukr"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Ungarisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "hun"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Urdu"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "urd"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Slovak"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "slk"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Slovene"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "slv"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Slowakisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "slk"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Slowenisch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "slv"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Sorbian, Upper"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "hsb"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/blank-down",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:language",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:language",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "bul",
+                                "l": "bul"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:language",
+        "description": "Blank down cells in column record - metadata - oai_dc:dc - dc:language"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:language - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:language - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "en"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "eng"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:title - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "de"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:title - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Institut für Deutsche Sprache"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "IDS Mannheim"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Leibniz-Institut für Deutsche Sprache"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "IDS Mannheim"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "..."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value.replace(\"/\",\"–\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:coverage using expression value.replace(\"/\",\"–\")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value.replace(\" - \",\"–\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:coverage using expression value.replace(\" - \",\"–\")"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "de"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description - xml:lang",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "en"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "eng"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:description - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY 3.0; https://creativecommons.org/licenses/by-sa/3.0/legalcode; Legal restrictions may arise from data protection legislation."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CC BY 4.0; https://creativecommons.org/licenses/by/4.0/; Legal restrictions may arise from data protection legislation."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/column-split",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:format",
+        "guessCellType": true,
+        "removeOriginalColumn": false,
+        "mode": "separator",
+        "separator": "/",
+        "regex": false,
+        "maxColumns": 0,
+        "description": "Split column record - metadata - oai_dc:dc - dc:format by separator"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:format 1",
+        "newColumnName": "format - IAANA recommendation - mediatype",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:format 1 to format - IAANA recommendation - mediatype"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:format 2",
+        "newColumnName": "format - IAANA recommendation - subtype",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:format 2 to format - IAANA recommendation - subtype"
+    },
+    {
+        "op": "core/column-addition",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "baseColumnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "grel:value",
+        "onError": "keep-original",
+        "newColumnName": "type - dcmi recommendation",
+        "columnInsertIndex": 13,
+        "description": "Create column type - dcmi recommendation at index 13 based on column record - metadata - oai_dc:dc - dc:type using expression grel:value"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "1912-1933"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "1912–1933"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:coverage"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:title - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:title - xml:lang"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Kundgebung des Reichspräsidenten F. Ebert",
+                    "Kundgebung des Reichspräsidenten F. Ebert ..."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Kundgebung des Reichspräsidenten F. Ebert"
+            },
+            {
+                "from": [
+                    "Aufruf des Vorstandes der SPD",
+                    "Aufruf des Vorstandes der SPD ..."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Aufruf des Vorstandes der SPD"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:title"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:subject - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:subject - xml:lang"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:creator using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "WilhelmII.",
+                    "WilhelmII"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wilhelm II."
+            },
+            {
+                "from": [
+                    "Cohen-Reuss",
+                    "Cohen-Reuß"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Cohen-Reuß"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Spanner",
+                    "Spanneru.a."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Spanner"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "N.N."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "NA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - dc:description - xml:lang",
+        "description": "Remove column record - metadata - oai_dc:dc - dc:description - xml:lang"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - header - datestamp",
+        "newColumnName": "datestamp",
+        "description": "Rename column record - header - datestamp to datestamp"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:creator",
+        "newColumnName": "creator",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:creator to creator"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:language",
+        "newColumnName": "language",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:language to language"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:identifier",
+        "newColumnName": "identifier",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:identifier to identifier"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:title",
+        "newColumnName": "title",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:title to title"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:description",
+        "newColumnName": "description",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:description to description"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "newColumnName": "publisher",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:publisher to publisher"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:type",
+        "newColumnName": "type",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:type to type"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:format",
+        "newColumnName": "format",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:format to format"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:subject",
+        "newColumnName": "subject",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:subject to subject"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:source",
+        "newColumnName": "source",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:source to source"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:rights",
+        "newColumnName": "rights",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:rights to rights"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:relation",
+        "newColumnName": "relation",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:relation to relation"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:coverage",
+        "newColumnName": "coverage",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:coverage to coverage"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - header - identifier",
+        "newColumnName": "record id",
+        "description": "Rename column record - header - identifier to record id"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "format - IAANA recommendation - mediatype",
+        "newColumnName": "format - mediatype",
+        "description": "Rename column format - IAANA recommendation - mediatype to format - mediatype"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "format - IAANA recommendation - subtype",
+        "newColumnName": "format - subtype",
+        "description": "Rename column format - IAANA recommendation - subtype to format - subtype"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "language",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "de"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deu"
+            }
+        ],
+        "description": "Mass edit cells in column language"
+    }
+]

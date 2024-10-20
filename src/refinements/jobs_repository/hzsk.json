@@ -1,0 +1,6269 @@
+[
+    {
+        "op": "core/column-move",
+        "columnName": "record - header - datestamp",
+        "index": 0,
+        "description": "Move column record - header - datestamp to position 0"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "File",
+        "description": "Remove column File"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "record - metadata - oai_dc:dc - xsi:schemaLocation",
+        "description": "Remove column record - metadata - oai_dc:dc - xsi:schemaLocation"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - header - datestamp",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - header - datestamp using expression value.toDate()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:date",
+        "expression": "value.toDate()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:date using expression value.toDate()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Manuscript Studies",
+                    "Manuscript studies",
+                    "manuscript studies"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Manuscript Studies"
+            },
+            {
+                "from": [
+                    "Sea Ice",
+                    "Sea ice",
+                    "sea ice"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Sea Ice"
+            },
+            {
+                "from": [
+                    "Visual deprivation",
+                    "Visual Deprivation",
+                    "visual deprivation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Visual deprivation"
+            },
+            {
+                "from": [
+                    "Clay Tablet",
+                    "Clay tablet",
+                    "clay tablet"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Clay Tablet"
+            },
+            {
+                "from": [
+                    "Wind speed",
+                    "Wind Speed",
+                    "wind speed"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wind speed"
+            },
+            {
+                "from": [
+                    "X-ray Fluorescence Spectroscopy",
+                    "X-Ray Fluorescence Spectroscopy",
+                    "X-ray fluorescence spectroscopy"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "X-ray Fluorescence Spectroscopy"
+            },
+            {
+                "from": [
+                    "administrative document",
+                    "Administrative Document",
+                    "Administrative document"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Administrative Document"
+            },
+            {
+                "from": [
+                    "Plaster cast",
+                    "Plaster Cast",
+                    "plaster cast"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Plaster cast"
+            },
+            {
+                "from": [
+                    "Wind direction",
+                    "Wind Direction",
+                    "wind direction"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wind direction"
+            },
+            {
+                "from": [
+                    "LIDAR",
+                    "Lidar",
+                    "lidar"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "LIDAR"
+            },
+            {
+                "from": [
+                    "Carbon Ink",
+                    "carbon ink",
+                    "Carbon ink"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Carbon Ink"
+            },
+            {
+                "from": [
+                    "FESSTVaL",
+                    "FESSTVAL",
+                    "FESSTVal"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "FESSTVaL"
+            },
+            {
+                "from": [
+                    "Friendship album",
+                    "Friendship Album"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Friendship album"
+            },
+            {
+                "from": [
+                    "narrative",
+                    "Narrative"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Narrative"
+            },
+            {
+                "from": [
+                    "wind",
+                    "Wind"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wind"
+            },
+            {
+                "from": [
+                    "gold",
+                    "Gold"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Gold"
+            },
+            {
+                "from": [
+                    "inscriptions",
+                    "Inscriptions"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Inscriptions"
+            },
+            {
+                "from": [
+                    "Bufo",
+                    "bufo"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Bufo"
+            },
+            {
+                "from": [
+                    "Mixotrophy",
+                    "mixotrophy"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Mixotrophy"
+            },
+            {
+                "from": [
+                    "illumination",
+                    "Illumination"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Illumination"
+            },
+            {
+                "from": [
+                    "Middle Low German",
+                    "German Middle Low"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Middle Low German"
+            },
+            {
+                "from": [
+                    "Qurʾān",
+                    "Qur'ān"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Qurʾān"
+            },
+            {
+                "from": [
+                    "Medieval studies",
+                    "medieval studies"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Medieval studies"
+            },
+            {
+                "from": [
+                    "turbulence",
+                    "Turbulence"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Turbulence"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:subject using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:subject using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "manuscripts",
+                    "Manuscripts"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Manuscripts"
+            },
+            {
+                "from": [
+                    "Cuneiform",
+                    "cuneiform"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Cuneiform"
+            },
+            {
+                "from": [
+                    "New Testament studies",
+                    "New Testament Studies"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "New Testament Studies"
+            },
+            {
+                "from": [
+                    "child bilingualism",
+                    "Child bilingualism"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Child bilingualism"
+            },
+            {
+                "from": [
+                    "Events",
+                    "events"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Events"
+            },
+            {
+                "from": [
+                    "unified structure generation for universal information extraction",
+                    "Unified Structure Generation for Universal Information Extraction"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Unified Structure Generation for Universal Information Extraction"
+            },
+            {
+                "from": [
+                    "Bombina",
+                    "bombina"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Bombina"
+            },
+            {
+                "from": [
+                    "Erziehungswissenschaft",
+                    "erziehungswissenschaft"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Erziehungswissenschaft"
+            },
+            {
+                "from": [
+                    "Marine Cryosphere",
+                    "Marine cryosphere"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Marine Cryosphere"
+            },
+            {
+                "from": [
+                    "Sound-shape symbolism",
+                    "Sound-Shape Symbolism"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Sound-shape symbolism"
+            },
+            {
+                "from": [
+                    "Information Retrieval",
+                    "information retrieval"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Information Retrieval"
+            },
+            {
+                "from": [
+                    "Dataset",
+                    "dataset"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Dataset"
+            },
+            {
+                "from": [
+                    "regional variety",
+                    "Regional Variety"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Regional Variety"
+            },
+            {
+                "from": [
+                    "Byzantine Studies",
+                    "Byzantine studies"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Byzantine Studies"
+            },
+            {
+                "from": [
+                    "Dino-Lite",
+                    "DinoLite"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Dino-Lite"
+            },
+            {
+                "from": [
+                    "Vermillion",
+                    "vermillion"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Vermillion"
+            },
+            {
+                "from": [
+                    "Black Ink",
+                    "Black ink"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Black Ink"
+            },
+            {
+                "from": [
+                    "studie",
+                    "Studie"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Studie"
+            },
+            {
+                "from": [
+                    "Restoration",
+                    "restoration"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Restoration"
+            },
+            {
+                "from": [
+                    "Codebuch",
+                    "codebuch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Codebuch"
+            },
+            {
+                "from": [
+                    "Ethiopic",
+                    "ethiopic"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Ethiopic"
+            },
+            {
+                "from": [
+                    "Bilingualism",
+                    "bilingualism"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Bilingualism"
+            },
+            {
+                "from": [
+                    "Batak",
+                    "BATAK"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Batak"
+            },
+            {
+                "from": [
+                    "radikalisierung",
+                    "Radikalisierung,"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Radikalisierung"
+            },
+            {
+                "from": [
+                    "extremismus",
+                    "Extremismus"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Extremismus"
+            },
+            {
+                "from": [
+                    "Breviceps",
+                    "breviceps"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Breviceps"
+            },
+            {
+                "from": [
+                    "Forschungsdaten",
+                    "forschungsdaten"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Forschungsdaten"
+            },
+            {
+                "from": [
+                    "Digital Humanities",
+                    "Digital humanities"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Digital Humanities"
+            },
+            {
+                "from": [
+                    "natural language processing",
+                    "Natural Language Processing"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Natural Language Processing"
+            },
+            {
+                "from": [
+                    "spoken language",
+                    "Spoken language"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Spoken language"
+            },
+            {
+                "from": [
+                    "Medieval",
+                    "medieval"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Medieval"
+            },
+            {
+                "from": [
+                    "Corpus",
+                    "corpus"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Corpus"
+            },
+            {
+                "from": [
+                    "Train",
+                    "train"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Train"
+            },
+            {
+                "from": [
+                    "Multisensory development",
+                    "Multisensory Development"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Multisensory Development"
+            },
+            {
+                "from": [
+                    "3D Scan",
+                    "3D scan"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "3D Scan"
+            },
+            {
+                "from": [
+                    "Antisemitismus",
+                    "antisemitismus"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Antisemitismus"
+            },
+            {
+                "from": [
+                    "Non-Linear",
+                    "Nonlinear"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Non-Linear"
+            },
+            {
+                "from": [
+                    "python",
+                    "Python"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Python"
+            },
+            {
+                "from": [
+                    "scraping",
+                    "Scraping"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Scraping"
+            },
+            {
+                "from": [
+                    "iron-gall ink",
+                    "Iron-gall ink"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Iron-gall ink"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Global radiation",
+                    "global radiation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Global radiation"
+            },
+            {
+                "from": [
+                    "Sinusoidal Grid Tiles",
+                    "Sinusoidal grid tiles"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Sinusoidal Grid Tiles"
+            },
+            {
+                "from": [
+                    "sustainability",
+                    "Sustainability"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Sustainability"
+            },
+            {
+                "from": [
+                    "Prosocial Behavior",
+                    "prosocial behavior"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Prosocial Behavior"
+            },
+            {
+                "from": [
+                    "einstellungen",
+                    "Einstellungen"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Einstellungen"
+            },
+            {
+                "from": [
+                    "precipitation",
+                    "Precipitation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Precipitation"
+            },
+            {
+                "from": [
+                    "temperature",
+                    "Temperature"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Temperature"
+            },
+            {
+                "from": [
+                    "MK&G",
+                    "MKG"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "MK&G"
+            },
+            {
+                "from": [
+                    "ice model",
+                    "model ice"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ice model"
+            },
+            {
+                "from": [
+                    "Textual Amulets",
+                    "textual amulets"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Textual Amulets"
+            },
+            {
+                "from": [
+                    "elicitation",
+                    "Elicitation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Elicitation"
+            },
+            {
+                "from": [
+                    "High Performance Cluster",
+                    "high performance cluster"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "High Performance Cluster"
+            },
+            {
+                "from": [
+                    "Reference Points",
+                    "reference points"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Reference Points"
+            },
+            {
+                "from": [
+                    "linguistics",
+                    "Linguistics"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Linguistics"
+            },
+            {
+                "from": [
+                    "Europe",
+                    "europe"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Europe"
+            },
+            {
+                "from": [
+                    "15th Century",
+                    "15th century"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "15th Century"
+            },
+            {
+                "from": [
+                    "Paper",
+                    "paper"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Paper"
+            },
+            {
+                "from": [
+                    "Data Visualization",
+                    "data visualization"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Data Visualization"
+            },
+            {
+                "from": [
+                    "Open Data",
+                    "open data"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Open Data"
+            },
+            {
+                "from": [
+                    "community interpreting",
+                    "community Interpreting"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Community Interpreting"
+            },
+            {
+                "from": [
+                    "Performance",
+                    "performance"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Performance"
+            },
+            {
+                "from": [
+                    "Soil Temperature",
+                    "soil temperature"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Soil Temperature"
+            },
+            {
+                "from": [
+                    "Longwave Radiation",
+                    "longwave radiation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Longwave Radiation"
+            },
+            {
+                "from": [
+                    "annotation",
+                    "Annotation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Annotation"
+            },
+            {
+                "from": [
+                    "Mixed Ink",
+                    "Mixed ink"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Mixed Ink"
+            },
+            {
+                "from": [
+                    "Syriac Studies",
+                    "Syriac studies"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Syriac Studies"
+            },
+            {
+                "from": [
+                    "Archaeology",
+                    "archaeology"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Archaeology"
+            },
+            {
+                "from": [
+                    "atmosphere",
+                    "Atmosphere"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Atmosphere"
+            },
+            {
+                "from": [
+                    "Arabic Studies",
+                    "Arabic studies"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Arabic Studies"
+            },
+            {
+                "from": [
+                    "Green algae",
+                    "green algae"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Green algae"
+            },
+            {
+                "from": [
+                    "musical notation",
+                    "Musical notation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Musical notation"
+            },
+            {
+                "from": [
+                    "brass",
+                    "Brass"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Brass"
+            },
+            {
+                "from": [
+                    "Monthly",
+                    "monthly"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Monthly"
+            },
+            {
+                "from": [
+                    "language contact",
+                    "Language Contact"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Language Contact"
+            },
+            {
+                "from": [
+                    "Cinnabar",
+                    "cinnabar"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Cinnabar"
+            },
+            {
+                "from": [
+                    "Shortwave Radiation",
+                    "shortwave radiation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Shortwave Radiation"
+            },
+            {
+                "from": [
+                    "Ethiopian Studies",
+                    "Ethiopian studies"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Ethiopian Studies"
+            },
+            {
+                "from": [
+                    "Tensor Networks",
+                    "tensor networks"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Tensor Networks"
+            },
+            {
+                "from": [
+                    "letter",
+                    "Letter"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Letter"
+            },
+            {
+                "from": [
+                    "Data Exploration",
+                    "data exploration"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Data Exploration"
+            },
+            {
+                "from": [
+                    "nlp",
+                    "NLP"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "NLP"
+            },
+            {
+                "from": [
+                    "Meteorological observations",
+                    "meteorological observations"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Meteorological observations"
+            },
+            {
+                "from": [
+                    "Global maps",
+                    "Global Maps"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Global Maps"
+            },
+            {
+                "from": [
+                    "Airports",
+                    "airports"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Airports"
+            },
+            {
+                "from": [
+                    "Text criticism",
+                    "Text Criticism"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Text Criticism"
+            },
+            {
+                "from": [
+                    "L2 data",
+                    "l2 data"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "L2 data"
+            },
+            {
+                "from": [
+                    "Quantum Computing",
+                    "quantum computing"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Quantum Computing"
+            },
+            {
+                "from": [
+                    "Turkish",
+                    "turkish"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Turkish"
+            },
+            {
+                "from": [
+                    "Jewish Studies",
+                    "Jewish studies"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jewish Studies"
+            },
+            {
+                "from": [
+                    "Database",
+                    "database"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Database"
+            },
+            {
+                "from": [
+                    "lead white",
+                    "White lead"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "White lead"
+            },
+            {
+                "from": [
+                    "Hebrew Studies",
+                    "Hebrew studies"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Hebrew Studies"
+            },
+            {
+                "from": [
+                    "Humidity",
+                    "humidity"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Humidity"
+            },
+            {
+                "from": [
+                    "Deutsches Elektronen-Synchrotron (DESY)",
+                    "Deutsches Elektronen-Synchrotron DESY"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Deutsches Elektronen-Synchrotron (DESY)"
+            },
+            {
+                "from": [
+                    "COVID-19",
+                    "Covid-19"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "COVID-19"
+            },
+            {
+                "from": [
+                    "Delay",
+                    "delay"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Delay"
+            },
+            {
+                "from": [
+                    "3D Model",
+                    "3D model"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "3D Model"
+            },
+            {
+                "from": [
+                    "open science",
+                    "Open Science"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Open Science"
+            },
+            {
+                "from": [
+                    "fingerprint model",
+                    "Fingerprint model"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Fingerprint model"
+            },
+            {
+                "from": [
+                    "relative humidity",
+                    "Relative humidity"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Relative humidity"
+            },
+            {
+                "from": [
+                    "named entity recognition",
+                    "Named Entity Recognition"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Named Entity Recognition"
+            },
+            {
+                "from": [
+                    "Font",
+                    "font"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Font"
+            },
+            {
+                "from": [
+                    "Parchment",
+                    "parchment"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Parchment"
+            },
+            {
+                "from": [
+                    "Islamic Studies",
+                    "Islamic studies"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Islamic Studies"
+            },
+            {
+                "from": [
+                    "German literature",
+                    "German Literature"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "German Literature"
+            },
+            {
+                "from": [
+                    "Moulage",
+                    "moulage"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Moulage"
+            },
+            {
+                "from": [
+                    "Conservation",
+                    "conservation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Conservation"
+            },
+            {
+                "from": [
+                    "Music Palimpsest",
+                    "Music palimpsest"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Music Palimpsest"
+            },
+            {
+                "from": [
+                    "Red Ink",
+                    "Red ink"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Red Ink"
+            },
+            {
+                "from": [
+                    "Oriental Studies",
+                    "Oriental studies"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Oriental Studies"
+            },
+            {
+                "from": [
+                    "Language Acquisition",
+                    "language acquisition"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Language Acquisition"
+            },
+            {
+                "from": [
+                    "Wind gust",
+                    "wind gust"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wind gust"
+            },
+            {
+                "from": [
+                    "partitur editor",
+                    "Partitur Editor"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Partitur Editor"
+            },
+            {
+                "from": [
+                    "Picophytoplankton",
+                    "picophytoplankton"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Picophytoplankton"
+            },
+            {
+                "from": [
+                    "Federated Search",
+                    "federated search"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Federated Search"
+            },
+            {
+                "from": [
+                    "3D-Model",
+                    "3d-model"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "3D-Model"
+            },
+            {
+                "from": [
+                    "Plant Ink",
+                    "plant ink"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Plant Ink"
+            },
+            {
+                "from": [
+                    "Manuscript",
+                    "manuscript"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Manuscript"
+            },
+            {
+                "from": [
+                    "ars nova notation",
+                    "Ars nova notation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Ars nova notation"
+            },
+            {
+                "from": [
+                    "Raman Spectroscopy",
+                    "Raman spectroscopy"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Raman Spectroscopy"
+            },
+            {
+                "from": [
+                    "Databasing on Demand",
+                    "databasing on demand"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Databasing on Demand"
+            },
+            {
+                "from": [
+                    "QCFD",
+                    "qcfd"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "QCFD"
+            },
+            {
+                "from": [
+                    "doctor-patient communication",
+                    "Doctor-Patient Communication"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Doctor-Patient Communication"
+            },
+            {
+                "from": [
+                    "Higher Education",
+                    "higher education"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Higher Education"
+            },
+            {
+                "from": [
+                    "motra",
+                    "MOTRA"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "MOTRA"
+            },
+            {
+                "from": [
+                    "Clavis",
+                    "clavis"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Clavis"
+            },
+            {
+                "from": [
+                    "Ink Analysis",
+                    "Ink analysis"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Ink Analysis"
+            },
+            {
+                "from": [
+                    "Scroll",
+                    "scroll"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Scroll"
+            },
+            {
+                "from": [
+                    "Pigment Identification",
+                    "pigment identification"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Pigment Identification"
+            },
+            {
+                "from": [
+                    "Artefact Profiling",
+                    "Artefact profiling"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Artefact Profiling"
+            },
+            {
+                "from": [
+                    "Computational Fluid Dynamics",
+                    "computational fluid dynamics"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Computational Fluid Dynamics"
+            },
+            {
+                "from": [
+                    "Disjecta Membra",
+                    "membra disjecta"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Disjecta Membra"
+            },
+            {
+                "from": [
+                    "quickstart",
+                    "Quickstart"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Quickstart"
+            },
+            {
+                "from": [
+                    "15th century CE",
+                    "15th Century CE"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "15th Century CE"
+            },
+            {
+                "from": [
+                    "Written Artefacts",
+                    "Written artefacts"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Written Artefacts"
+            },
+            {
+                "from": [
+                    "Soil Moisture",
+                    "soil moisture"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Soil Moisture"
+            },
+            {
+                "from": [
+                    "Crossmodal correspondence",
+                    "Crossmodal Correspondence"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Crossmodal Correspondence"
+            },
+            {
+                "from": [
+                    "Satellite Remote Sensing",
+                    "Satellite remote sensing"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Satellite Remote Sensing"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "silver",
+                    "Silver"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Silver"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "bert",
+                    "BERT"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "BERT"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "13th centrury CE"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "13th century CE"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "14 century CE"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "14th century CE"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "3D-Model"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "3D Model"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "3D-Scan"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "3D Scan"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value.replace(\"century\",\"Century\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:subject using expression value.replace(\"century\",\"Century\")"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "15th centrury CE"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "15th Century CE"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": "century",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "14th Century"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "14th Century CE"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": "century",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "15th Century"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "15th Century CE"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": "century",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "16th Century"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "16th Century CE"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": "century",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "18th Century"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "18th Century CE"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": "century",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "19th Century"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "19th Century CE"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": "century",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "20th Century"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "20th Century CE"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": "century",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Nineteenth Century photography"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "19th Century photography"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": "century",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:subject using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": "century",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:subject using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": ",",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Bibliothek des Staatsarchives, Hamburg"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Bibliothek des Staatsarchives Hamburg"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": ",",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Bundesanstalt für Materialforschung und -prüfung, Berlin (BAM)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Bundesanstalt für Materialforschung und -prüfung Berlin (BAM)"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": ",",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Melk, Stiftbibliothek"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Melk, Stiftsbibliothek"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": ",",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Melk, Stiftsbibliothek"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Stiftsbibliothek Melk"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": ",",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "St. Aegidien Kirche, Lübeck"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "St. Aegidien Kirche Lübeck"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": ",",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "St. Anne's Museum, Lübeck"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "St. Anne's Museum Lübeck"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": ",",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "St. Mary's Church, Lübeck"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "St. Mary's Church Lübeck"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/multivalued-cell-split",
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "keyColumnName": "record - header - datestamp",
+        "mode": "separator",
+        "separator": ",",
+        "regex": false,
+        "description": "Split multi-valued cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:subject using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:subject using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": "\\d+-\\d+",
+                    "mode": "regex",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "1000-1001 CE"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "1000–1001 CE"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": "\\d+-\\d+",
+                    "mode": "regex",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Verfasserlexikon 1620-1720 VL17 Lebaldt-Omeis Handschriftenkataloge Briefdrucke"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Verfasserlexikon 1620–1720 VL17 Lebaldt-Omeis Handschriftenkataloge Briefdrucke"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value.toLowercase()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:subject using expression value.toLowercase()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "human health.",
+                                "l": "human health."
+                            }
+                        },
+                        {
+                            "v": {
+                                "v": "human health",
+                                "l": "human health"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "human health",
+                    "human health."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "human health"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "bio-energy with carbon capture and storage",
+                    "bioenergy with carbon capture and storage"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "bioenergy with carbon capture and storage"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "climate adaptation",
+                    "climate adaptation."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "climate adaptation"
+            },
+            {
+                "from": [
+                    "water management",
+                    "water management."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "water management"
+            },
+            {
+                "from": [
+                    "ecological intensification",
+                    "ecological intensification."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ecological intensification"
+            },
+            {
+                "from": [
+                    "ecosystem services",
+                    "ecosystem services."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ecosystem services"
+            },
+            {
+                "from": [
+                    "climate engineering",
+                    "climate engineering."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "climate engineering"
+            },
+            {
+                "from": [
+                    "forest management",
+                    "forest management."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "forest management"
+            },
+            {
+                "from": [
+                    "sustainability",
+                    "sustainability."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "sustainability"
+            },
+            {
+                "from": [
+                    "mangrove forests",
+                    "mangrove forests."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "mangrove forests"
+            },
+            {
+                "from": [
+                    "vulnerable to extreme weather",
+                    "vulnerable to weather extreme"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "vulnerable to extreme weather"
+            },
+            {
+                "from": [
+                    "soil loss",
+                    "soil loss."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "soil loss"
+            },
+            {
+                "from": [
+                    "little ice age",
+                    "»little ice age«"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "little ice age"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "high mountain",
+                                "l": "high mountain"
+                            }
+                        },
+                        {
+                            "v": {
+                                "v": "high-mountain",
+                                "l": "high-mountain"
+                            }
+                        },
+                        {
+                            "v": {
+                                "v": "high mountains",
+                                "l": "high mountains"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "high mountains",
+                    "high mountain"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "high mountain"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "expression": "value",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "high mountain",
+                                "l": "high mountain"
+                            }
+                        },
+                        {
+                            "v": {
+                                "v": "high-mountain",
+                                "l": "high-mountain"
+                            }
+                        },
+                        {
+                            "v": {
+                                "v": "high mountains",
+                                "l": "high mountains"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "high mountain",
+                    "high-mountain"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "high mountain"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": " )",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "nitrogen dioxide (no2 )"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "nitrogen dioxide (no2)"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "record - metadata - oai_dc:dc - dc:subject",
+                    "columnName": "record - metadata - oai_dc:dc - dc:subject",
+                    "query": " )",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "ozone (o3 )"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ozone (o3)"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "(ipcc"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ipcc"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:subject"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:subject",
+        "expression": "value.replace(/[‘’‚‛‹›‚]/,\"\\'\").replace(/[“”«»„]/,\"\\\"\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:subject using expression value.replace(/[‘’‚‛‹›‚]/,\"\\'\").replace(/[“”«»„]/,\"\\\"\")"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Gabriel de Moura Kiipper",
+                    "de Moura Kiipper, Gabriel"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "de Moura Kiipper, Gabriel"
+            },
+            {
+                "from": [
+                    "Jennifer Preiß",
+                    "Preiß, Jennifer"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Preiß, Jennifer"
+            },
+            {
+                "from": [
+                    "Haase, Knut",
+                    "Knut Haase"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Haase, Knut"
+            },
+            {
+                "from": [
+                    "Zollo, Roberta",
+                    "Roberta Zollo"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Zollo, Roberta"
+            },
+            {
+                "from": [
+                    "Janek Meyn",
+                    "Meyn, Janek"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Meyn, Janek"
+            },
+            {
+                "from": [
+                    "Korte, Dominic",
+                    "Dominic Korte"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Dominic Korte"
+            },
+            {
+                "from": [
+                    "Harter-Uibopuu, Kaja",
+                    "Kaja Harter-Uibopuu"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Harter-Uibopuu, Kaja"
+            },
+            {
+                "from": [
+                    "Meikel Soliman",
+                    "Soliman, Meikel"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Soliman, Meikel"
+            },
+            {
+                "from": [
+                    "Fromm, Jörg",
+                    "Jörg Fromm"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Fromm, Jörg"
+            },
+            {
+                "from": [
+                    "Schwenn, Fabian",
+                    "Fabian Schwenn"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Schwenn, Fabian"
+            },
+            {
+                "from": [
+                    "Sophia Dege",
+                    "Dege, Sophia"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Dege, Sophia"
+            },
+            {
+                "from": [
+                    "Hummel, Susanne",
+                    "Susanne Hummel"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Hummel, Susanne"
+            },
+            {
+                "from": [
+                    "Mickein, Markus",
+                    "Markus Mickein"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Mickein, Markus"
+            },
+            {
+                "from": [
+                    "Michael Kandziora",
+                    "Kandziora, Michael"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Kandziora, Michael"
+            },
+            {
+                "from": [
+                    "Negrete, Oscar",
+                    "Oscar Negrete"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Negrete, Oscar"
+            },
+            {
+                "from": [
+                    "Lars Schwabe",
+                    "Schwabe, Lars"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Schwabe, Lars"
+            },
+            {
+                "from": [
+                    "Maria Bulakh",
+                    "Bulakh, Maria"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Bulakh, Maria"
+            },
+            {
+                "from": [
+                    "Eric Werner",
+                    "Werner, Eric"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Werner, Eric"
+            },
+            {
+                "from": [
+                    "Alexander Weinstock",
+                    "Weinstock, Alexander"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Alexander Weinstock"
+            },
+            {
+                "from": [
+                    "Allen, Garrick V.",
+                    "Garrick, Allen V."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Garrick, Allen V."
+            },
+            {
+                "from": [
+                    "Sandner, Sabrina",
+                    "Sabrina Sandner"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Sandner, Sabrina"
+            },
+            {
+                "from": [
+                    "Irmeli Perho",
+                    "Perho, Irmeli"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Perho, Irmeli"
+            },
+            {
+                "from": [
+                    "Pisani, Vitagrazia",
+                    "Vitagrazia Pisani"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Pisani, Vitagrazia"
+            },
+            {
+                "from": [
+                    "Bausi, Alessandro",
+                    "Alessandro Bausi"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Bausi, Alessandro"
+            },
+            {
+                "from": [
+                    "Thomas M. Kaiser",
+                    "Kaiser, Thomas M."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Kaiser, Thomas M."
+            },
+            {
+                "from": [
+                    "Sylvia Melzer",
+                    "Melzer, Sylvia"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Melzer, Sylvia"
+            },
+            {
+                "from": [
+                    "Sara Fani",
+                    "Fani, Sara"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Fani, Sara"
+            },
+            {
+                "from": [
+                    "Staack, Thies",
+                    "Thies Staack"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Staack, Thies"
+            },
+            {
+                "from": [
+                    "Adday Hernández",
+                    "Hernández, Adday"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Hernández, Adday"
+            },
+            {
+                "from": [
+                    "Farren, Diego",
+                    "Farren Diego"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Farren, Diego"
+            },
+            {
+                "from": [
+                    "Antonella Brita",
+                    "Brita, Antonella"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Brita, Antonella"
+            },
+            {
+                "from": [
+                    "Jaksch, Dieter",
+                    "Dieter Jaksch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jaksch, Dieter"
+            },
+            {
+                "from": [
+                    "Wagner-Nagy, Beáta",
+                    "Beáta Wagner-Nagy"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wagner-Nagy, Beáta"
+            },
+            {
+                "from": [
+                    "Pietro Liuzzo",
+                    "Liuzzo, Pietro"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Liuzzo, Pietro"
+            },
+            {
+                "from": [
+                    "Schmidt, Susanne",
+                    "Susanne Schmidt"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Schmidt, Susanne"
+            },
+            {
+                "from": [
+                    "Hagen Peukert",
+                    "Peukert, Hagen"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Peukert, Hagen"
+            },
+            {
+                "from": [
+                    "Anaïs Wion",
+                    "Wion, Anaïs"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wion, Anaïs"
+            },
+            {
+                "from": [
+                    "Dorothea Reule",
+                    "Reule, Dorothea"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Reule, Dorothea"
+            },
+            {
+                "from": [
+                    "Wörner, Kai",
+                    "Kai Wörner"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wörner, Kai"
+            },
+            {
+                "from": [
+                    "Veseli, Besarta",
+                    "Besarta Veseli"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Veseli, Besarta"
+            },
+            {
+                "from": [
+                    "Studte, Sinika",
+                    "Sinika Studte"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Studte, Sinika"
+            },
+            {
+                "from": [
+                    "Jacopo Gnisci",
+                    "Gnisci, Jacopo"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Gnisci, Jacopo"
+            },
+            {
+                "from": [
+                    "Bernhard Brehmer",
+                    "Brehmer, Bernhard"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Brehmer, Bernhard"
+            },
+            {
+                "from": [
+                    "Hendrik Heinbockel",
+                    "Heinbockel, Hendrik"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Heinbockel, Hendrik"
+            },
+            {
+                "from": [
+                    "Peursen, Wido van",
+                    "van Peursen, Wido"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Peursen, Wido van"
+            },
+            {
+                "from": [
+                    "Koch, Elena",
+                    "Elena Koch"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Koch, Elena"
+            },
+            {
+                "from": [
+                    "Julia Kehr",
+                    "Kehr, Julia"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Kehr, Julia"
+            },
+            {
+                "from": [
+                    "Lozán, José L.",
+                    "Lozán, josé L."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Lozán, José L."
+            },
+            {
+                "from": [
+                    "Kristina Lehnert",
+                    "Lehnert, Kristina"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Lehnert, Kristina"
+            },
+            {
+                "from": [
+                    "Steinicke, Frank",
+                    "Frank Steinicke"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Steinicke, Frank"
+            },
+            {
+                "from": [
+                    "Rosenau, Silvano Gordian",
+                    "Silvano Gordian Rosenau"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Rosenau, Silvano Gordian"
+            },
+            {
+                "from": [
+                    "Eliana Dal Sasso",
+                    "Dal Sasso, Eliana"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Dal Sasso, Eliana"
+            },
+            {
+                "from": [
+                    "Massimo Villa",
+                    "Villa, Massimo"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Villa, Massimo"
+            },
+            {
+                "from": [
+                    "Nosnitsin, Denis",
+                    "Denis Nosnitsin"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Nosnitsin, Denis"
+            },
+            {
+                "from": [
+                    "Puelles, Victor G",
+                    "Puelles, Victor G."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Puelles, Victor G."
+            },
+            {
+                "from": [
+                    "Anthony D Wagner",
+                    "Anthony D. Wagner"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Anthony D. Wagner"
+            },
+            {
+                "from": [
+                    "Kopf, Maria",
+                    "Kopf Maria"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Kopf, Maria"
+            },
+            {
+                "from": [
+                    "Ament, Felix",
+                    "Felix Ament"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Ament, Felix"
+            },
+            {
+                "from": [
+                    "Tiddia, Simone",
+                    "Simone Tiddia"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Tiddia, Simone"
+            },
+            {
+                "from": [
+                    "Meuser, John",
+                    "John Meuser"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Meuser, John"
+            },
+            {
+                "from": [
+                    "Engel, Andreas K.",
+                    "Andreas K. Engel"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Engel, Andreas K."
+            },
+            {
+                "from": [
+                    "Scheffran, Jürgen",
+                    "Scheffran, jürgen"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Scheffran, Jürgen"
+            },
+            {
+                "from": [
+                    "Fischer, Jannik M. K.",
+                    "Jannik M. K. Fischer"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Fischer, Jannik M. K."
+            },
+            {
+                "from": [
+                    "Röder, Brigitte",
+                    "Brigitte Röder"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Röder, Brigitte"
+            },
+            {
+                "from": [
+                    "Jahnke-Bornemann, Annika",
+                    "Annika Jahnke-Bornemann"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jahnke-Bornemann, Annika"
+            },
+            {
+                "from": [
+                    "Berns, Christof",
+                    "Berns,  Christof"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Berns, Christof"
+            },
+            {
+                "from": [
+                    "Ellen Schulz-Kornas",
+                    "Schulz-Kornas, Ellen"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Schulz-Kornas, Ellen"
+            },
+            {
+                "from": [
+                    "vom Lehn, Rainer",
+                    "Vom Lehn, Rainer"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "vom Lehn, Rainer"
+            },
+            {
+                "from": [
+                    "Sokolinski, Eugenia",
+                    "Eugenia Sokolinski"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Sokolinski, Eugenia"
+            },
+            {
+                "from": [
+                    "Rarey, Matthias",
+                    "Rarey Matthias"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Rarey, Matthias"
+            },
+            {
+                "from": [
+                    "Ursula Siebert",
+                    "Siebert, Ursula"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Siebert, Ursula"
+            },
+            {
+                "from": [
+                    "Maksimczuk, José",
+                    "José Maksimczuk"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Maksimczuk, José"
+            },
+            {
+                "from": [
+                    "Elehna Bethune",
+                    "Bethune, Elehna"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Bethune, Elehna"
+            },
+            {
+                "from": [
+                    "Liuzzo, Pietro Maria",
+                    "Pietro Maria Liuzzo"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Liuzzo, Pietro Maria"
+            },
+            {
+                "from": [
+                    "Gabel, Jenny",
+                    "Jenny Gabel"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Gabel, Jenny"
+            },
+            {
+                "from": [
+                    "Hussein Mohammed",
+                    "Mohammed, Hussein"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Mohammed, Hussein"
+            },
+            {
+                "from": [
+                    "Sarah, Wiesner",
+                    "Wiesner, Sarah"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wiesner, Sarah"
+            },
+            {
+                "from": [
+                    "Alessandro Gori",
+                    "Gori, Alessandro"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Gori, Alessandro"
+            },
+            {
+                "from": [
+                    "Michel Clement",
+                    "Clement, Michel"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Clement, Michel"
+            },
+            {
+                "from": [
+                    "Del Barco, Javier",
+                    "del Barco, Javier"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Del Barco, Javier"
+            },
+            {
+                "from": [
+                    "Eva-Maria Merz",
+                    "Merz, Eva-Maria"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Merz, Eva-Maria"
+            },
+            {
+                "from": [
+                    "Jost Gippert",
+                    "Gippert, Jost"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Gippert, Jost"
+            },
+            {
+                "from": [
+                    "Janis Denk",
+                    "Denk, Janis"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Denk, Janis"
+            },
+            {
+                "from": [
+                    "Ciotti, Giovanni",
+                    "Giovanni Ciotti"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Ciotti, Giovanni"
+            },
+            {
+                "from": [
+                    "Elagina, Daria",
+                    "Daria Elagina"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Elagina, Daria"
+            },
+            {
+                "from": [
+                    "Schickhoff, Udo",
+                    "Schickhoff\n, Udo"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Schickhoff, Udo"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:creator using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:creator using expression value.trim()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:contributor",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Suuso, Bamba",
+                    "Bamba, Suuso",
+                    "Suuso,  Bamba",
+                    "Suuso, Bamba,"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Suuso, Bamba"
+            },
+            {
+                "from": [
+                    "Vitagrazia Pisani",
+                    "Pisani Vitagrazia",
+                    "Pisani, Vitagrazia"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Pisani, Vitagrazia"
+            },
+            {
+                "from": [
+                    "Jaane, Keebaa Arafang",
+                    "Jaane, Arafang Keebaa"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jaane, Arafang Keebaa"
+            },
+            {
+                "from": [
+                    "Wiebke Beyer",
+                    "Beyer, Wiebke"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Beyer, Wiebke"
+            },
+            {
+                "from": [
+                    "Joobaate, Amadu  Basang",
+                    "Joobaate, Amadu Basang"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Joobaate, Amadu Basang"
+            },
+            {
+                "from": [
+                    "Susanne Hummel",
+                    "Hummel, Susanne"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Hummel, Susanne"
+            },
+            {
+                "from": [
+                    "Wolfgang Dickhut",
+                    "Dickhut, Wolfgang"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Dickhut, Wolfgang"
+            },
+            {
+                "from": [
+                    "Jaata, Seeni Marong",
+                    "Marong Jaata, Seeni"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jaata, Seeni Marong"
+            },
+            {
+                "from": [
+                    "Alessandro Bausi",
+                    "Bausi, Alessandro"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Bausi, Alessandro"
+            },
+            {
+                "from": [
+                    "Siise, Arafang Fode",
+                    "Siise, Arafang  Fode"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Siise, Arafang Fode"
+            },
+            {
+                "from": [
+                    "Andreas Ellwardt",
+                    "Ellwardt, Andreas"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Ellwardt, Andreas"
+            },
+            {
+                "from": [
+                    "Wagner-Nagy, Beata",
+                    "Wagner-Nagy, Beáta"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wagner-Nagy, Beata"
+            },
+            {
+                "from": [
+                    "Jettka, Daniel",
+                    "Daniel Jettka"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jettka, Daniel"
+            },
+            {
+                "from": [
+                    "Suware, Alhaji  Omaar",
+                    "Suware, Alhaji Omaar"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Suware, Alhaji Omaar"
+            },
+            {
+                "from": [
+                    "Breckle, Siegmar-W.",
+                    "Breckle, Siegmar-W"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Breckle, Siegmar-W."
+            },
+            {
+                "from": [
+                    "Jaata, Seeni Marang",
+                    "Jaata, Marang Seeni"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jaata, Seeni Marang"
+            },
+            {
+                "from": [
+                    "Kuyate, Momodu",
+                    "Kuyate , Momodu"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Kuyate, Momodu"
+            },
+            {
+                "from": [
+                    "Denis Nosnitsin",
+                    "Nosnitsin, Denis"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Nosnitsin, Denis"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:contributor"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:contributor",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Jaany, M. B.",
+                    "Jaany, B. M."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jaany, M. B."
+            },
+            {
+                "from": [
+                    "Jaane, Mbalefele",
+                    "Mbalefele, Jaane"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jaane, Mbalefele"
+            },
+            {
+                "from": [
+                    "Saaho,  Kunyee",
+                    "Saaho, Kunyee"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Saaho, Kunyee"
+            },
+            {
+                "from": [
+                    "Tuure,  Maamaalang",
+                    "Tuure, Maamaalang"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Tuure, Maamaalang"
+            },
+            {
+                "from": [
+                    "Magdalena Krzyżanowska",
+                    "Magdalena KRZYŻANOWSKA"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Krzyżanowska, Magdalena"
+            },
+            {
+                "from": [
+                    "Konte, Bayi",
+                    "Bayi, Konte"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Konte, Bayi"
+            },
+            {
+                "from": [
+                    "Eugenia Sokolinski",
+                    "Sokolinski, Eugenia"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Sokolinski, Eugenia"
+            },
+            {
+                "from": [
+                    "Cécile Michel",
+                    "Michel, Cécile"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Michel, Cécile"
+            },
+            {
+                "from": [
+                    "Unnamed performers",
+                    "un-named performers"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "unnamed performers"
+            },
+            {
+                "from": [
+                    "Schmidt, Thomas",
+                    "Schmidt,, Thomas"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Schmidt, Thomas"
+            },
+            {
+                "from": [
+                    "Graßl, Hartmut",
+                    "Grassl, Hartmut"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Graßl, Hartmut"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:contributor"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Fischer, Jannik M.K.",
+                    "Fischer, Jannik M. K."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Fischer, Jannik M.K."
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Breckle, Siegmar-W.",
+                    "Breckle,Siegmar-W"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Breckle, Siegmar-W."
+            },
+            {
+                "from": [
+                    "McCollum, Adam",
+                    "McCollum, Adam C."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "McCollum, Adam"
+            },
+            {
+                "from": [
+                    "Witkam, Jan Just",
+                    "Witkam, Jan-Just"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Witkam, Jan Just"
+            },
+            {
+                "from": [
+                    "Jänichen, Holger",
+                    "Jänichen,Holger"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jänichen, Holger"
+            },
+            {
+                "from": [
+                    "Wagner-Nagy, Beáta",
+                    "Wagner-Nagy, Be´ata"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wagner-Nagy, Beáta"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Johnsen, Lennart",
+                    "Johnsen, Lennart C.",
+                    "Johnsen, Lennart Christian"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Johnsen, Lennart"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Ghiannouli, Antonia",
+                    "Giannouli, Antonia"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Ghiannouli, Antonia"
+            },
+            {
+                "from": [
+                    "NCAC/RDD",
+                    "NCAC/RD"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "NCAC/RDD"
+            },
+            {
+                "from": [
+                    "Schulz-Kornas, Ellen",
+                    "Schulz-Kornas, E"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Schulz-Kornas, Ellen"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:creator",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Ortega-Monasterio, Maria Teresa",
+                    "Ortega-Monasterio, Teresa"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Ortega-Monasterio, Maria Teresa"
+            },
+            {
+                "from": [
+                    "Gumbert, Peter",
+                    "Gumbert, Peter J."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Gumbert, Peter"
+            },
+            {
+                "from": [
+                    "Brinkmann, Lisa Marie",
+                    "Brinkmann, Lisa Marie (coord.)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Brinkmann, Lisa Marie"
+            },
+            {
+                "from": [
+                    "Brüggemann, Michael",
+                    "Brüggemann, Michael (ed.)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Brüggemann, Michael"
+            },
+            {
+                "from": [
+                    "Kindzorra, Emanuel",
+                    "Kindzorra, Emmanuel"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Kindzorra, Emanuel"
+            },
+            {
+                "from": [
+                    "Farren, Diego",
+                    "Farren, Diegoe"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Farren, Diego"
+            },
+            {
+                "from": [
+                    "Couvrat Desvergnes, Amélie",
+                    "Couvrat Desvergnes"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Couvrat Desvergnes, Amélie"
+            },
+            {
+                "from": [
+                    "Kessel, Grigory",
+                    "Kessel, Gregory"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Kessel, Grigory"
+            },
+            {
+                "from": [
+                    "Corbett, Charles",
+                    "Corbett, Charles J."
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Corbett, Charles"
+            },
+            {
+                "from": [
+                    "Melo-Pfeifer, Sílvia",
+                    "Melo-Pfeifer, Sílvia (coord.)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Melo-Pfeifer, Sílvia"
+            },
+            {
+                "from": [
+                    "Donner, Tobias H.",
+                    "Donner, Tobias"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Donner, Tobias H."
+            },
+            {
+                "from": [
+                    "McMonagle, Sarah",
+                    "McMonagle, Sarah (coord.)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "McMonagle, Sarah"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:creator"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:contributor",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Breckle, Siegmar-W.",
+                    "Breckle,Siegmar-W"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Breckle, Siegmar-W."
+            },
+            {
+                "from": [
+                    "Cam, Maalang Hawa",
+                    "Cam, Maamaalang Hawa"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Cam, Maalang Hawa"
+            },
+            {
+                "from": [
+                    "Jaaju, Yaaya",
+                    "Jaaju,Yaaya"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jaaju, Yaaya"
+            },
+            {
+                "from": [
+                    "Daraame, Laalo Keebaa",
+                    "Darame, Laalo Keebaa"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Daraame, Laalo Keebaa"
+            },
+            {
+                "from": [
+                    "Sidibe, Baakari Keebaa",
+                    "SidibeBaakari Keebaa"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Sidibe, Baakari Keebaa"
+            },
+            {
+                "from": [
+                    "Wagner-Nagy, Be´ata",
+                    "Wagner-Nagy, Beata"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wagner-Nagy, Beata"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:contributor"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:contributor",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Suuso, Maanekeebaa",
+                    "Suuso, Manekeba",
+                    "Suusoo, Maanekeebaa"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Suuso, Manekeba"
+            },
+            {
+                "from": [
+                    "Jeebaate, Sirif",
+                    "Jeebaate, Sirifu",
+                    "Joobaate, Sirifu"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jeebaate, Sirifu"
+            },
+            {
+                "from": [
+                    "Deutsch Forschungsgemeinschaft (DFG)",
+                    "Deutsche Forschungsgemeinschaft (DFG)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Deutsch Forschungsgemeinschaft (DFG)"
+            },
+            {
+                "from": [
+                    "Jaata, Seeni Marang",
+                    "Jaata, Seeni Marong"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Jaata, Seeni Marang"
+            },
+            {
+                "from": [
+                    "Saane, Kabaa",
+                    "Saane, Keebaa"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Saane, Kabaa"
+            },
+            {
+                "from": [
+                    "Saaho, Kunyee",
+                    "Saaho, Kunye"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Saaho, Kunyee"
+            },
+            {
+                "from": [
+                    "Faati, Kaliilu",
+                    "Faati, Kalilu"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Faati, Kaliilu"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:contributor"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/article"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "article"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/book"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "book"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/bookPart"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "bookPart"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/conferencePaper"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "conference Paper"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "bookPart"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "book Part"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "conference Paper"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "conference paper"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "book Part"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "book part"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/conferencePoster"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "conference poster"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/doctoralThesis"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "doctoral thesis"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/lecture"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "lecture"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/other"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "other"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/preprint"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "preprint"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/report"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "report"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/technicalDocumentation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "technical documentation"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/workingPaper"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "working paper"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "publication-article"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "article"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "publication-book"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "book"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "publication-conferencepaper"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "conferencepaper"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "publication-deliverable"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "deliverable"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "publication-milestone"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "milestone"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "publication-other"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "other"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value.replace(\"publication-\",\" \")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:type using expression value.replace(\"publication-\",\" \")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:type using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:type using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "working paper"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "conferencepaper"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "poster"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "thesis"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "image-photo"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "photo"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "technicalnote"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "technical note"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:type",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "softwaredocumentation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "software documentation"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:type"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "http://www.opendefinition.org/licenses/cc-by"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "http://www.opendefinition.org/licenses/cc-zero"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC 0 "
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://creativecommons.org/licenses/by-nc-nd/2.0/legalcode"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC ND"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC ND"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://creativecommons.org/licenses/by-nc/1.0/legalcode"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://creativecommons.org/licenses/by-nc/3.0/legalcode"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://creativecommons.org/licenses/by-nc/4.0/legalcode"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY NC"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY SA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://creativecommons.org/licenses/by/3.0/legalcode"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://creativecommons.org/licenses/by/4.0/legalcode"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC 0"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://opendatacommons.org/licenses/by/1.0/"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CC BY"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://opensource.org/licenses/AGPL-3.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "AGPL-3.0"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://opensource.org/licenses/GPL-3.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": " Open Source Licences GPL-3.0"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "AGPL-3.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Open Source Licences AGPL-3.0"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://opensource.org/licenses/LPPL-1.3c"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": " Open Source Licence LPPL-1.3c"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    " Open Source Licences GPL-3.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": " Open Source Licence GPL-3.0"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "https://opensource.org/licenses/MIT"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": " Open Source Licence MIT"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/closedAccess"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Closed Access"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/embargoedAccess"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Embargoed Access"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/openAccess"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "OA"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "info:eu-repo/semantics/restrictedAccess"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Restricted Access"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Open Source Licences AGPL-3.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Open Source Licence AGPL-3.0"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:rights using expression value.trim()"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Open Source Licence GPL-3.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Open Source Licence GPL"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Open Source Licence AGPL-3.0"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Open Source Licence AGPL"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:rights",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Open Source Licence LPPL-1.3c"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Open Source Licence LPPL"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:rights"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:description",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:description using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "---"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:title"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:title using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column record - metadata - oai_dc:dc - dc:title using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "The Impact of COVID-19 On Blood Donations",
+                    "The impact of COVID-19 on blood donations",
+                    "The Impact of COVID-19 on Blood Donations"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "The Impact of COVID-19 On Blood Donations"
+            },
+            {
+                "from": [
+                    "The Role of Affect, Satisfaction and Internal Drive on Personal Moral Norms during COVID-19",
+                    "The Role of Affect, Satisfaction, and Internal Drive on Personal Moral Norms during COVID-19",
+                    "The role of affect, satisfaction, and internal drive on per-sonal moral norms during COVID-19"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "The Role of Affect, Satisfaction and Internal Drive on Personal Moral Norms during COVID-19"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:title"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:title",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "CHILD-L2",
+                    "Child-L2"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CHILD-L2"
+            },
+            {
+                "from": [
+                    "Reference Corpus Middle Low German/Low Rhenish (1200-1650); Referenzkorpus Mittelniederdeutsch/Niederrheinisch (1200-1650)",
+                    "Reference Corpus Middle Low German/Low Rhenish (1200–1650); Referenzkorpus Mittelniederdeutsch/Niederrheinisch (1200–1650)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Reference Corpus Middle Low German/Low Rhenish (1200-1650); Referenzkorpus Mittelniederdeutsch/Niederrheinisch (1200-1650)"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:title"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Graduate Linguistics Students Association (GLSA)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Graduate Linguistics Students Association"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Verlag Wissenschaftliche Auswertungen in Kooperation mit GEO Magazin-Hamburg"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Verlag Wissenschaftliche Auswertungen, GEO Magazin-Hamburg"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Wissenschaftliche Auswertungen in Kooperation mit GEO Magazin"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wissenschaftliche Auswertungen, GEO Magazin"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Wissenschaftliche Auswertungen in Kooperation mit GEO Magazin-Hamburg"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wissenschaftliche Auswertungen,GEO Magazin-Hamburg"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Wissenschaftliche Auswertungen,GEO Magazin-Hamburg"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wissenschaftliche Auswertungen, GEO Magazin-Hamburg"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Wissenschaftliche Auswertungen, GEO Magazin",
+                    "Wissenschaftliche Auswertungen, GEO Magazin-Hamburg",
+                    "Weissenschaftliche Auswertungen in Kooperation mit GEO Magazin",
+                    "Wissenschaftliche Auswertungen in Kooperation mit GEO Magazin, Hamburg"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Wissenschaftliche Auswertungen, GEO Magazin"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Verlag Wissenschaftliche Auswertungen, GEO Magazin-Hamburg",
+                    "Verlag Wissenschaftliche Auswertungen in Kooperation mit GEO Magazin, Hamburg"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Verlag Wissenschaftliche Auswertungen, GEO Magazin"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "Wissenschaftliche Auswertungen, GEO Magazin"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Verlag Wissenschaftliche Auswertungen, GEO Magazin"
+            }
+        ],
+        "description": "Mass edit cells in column record - metadata - oai_dc:dc - dc:publisher"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - header - datestamp",
+        "newColumnName": "datestamp",
+        "description": "Rename column record - header - datestamp to datestamp"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:creator",
+        "newColumnName": "creator",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:creator to creator"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:language",
+        "newColumnName": "language",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:language to language"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:identifier",
+        "newColumnName": "identifier",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:identifier to identifier"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:title",
+        "newColumnName": "title",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:title to title"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:description",
+        "newColumnName": "description",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:description to description"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:date",
+        "newColumnName": "date",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:date to date"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:publisher",
+        "newColumnName": "publisher",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:publisher to publisher"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:type",
+        "newColumnName": "type",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:type to type"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:subject",
+        "newColumnName": "subject",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:subject to subject"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:source",
+        "newColumnName": "source",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:source to source"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:rights",
+        "newColumnName": "rights",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:rights to rights"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:relation",
+        "newColumnName": "relation",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:relation to relation"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - metadata - oai_dc:dc - dc:contributor",
+        "newColumnName": "contributor",
+        "description": "Rename column record - metadata - oai_dc:dc - dc:contributor to contributor"
+    },
+    {
+        "op": "core/column-addition",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "baseColumnName": "type",
+        "expression": "grel:value",
+        "onError": "keep-original",
+        "newColumnName": "type - dcmi recommendation",
+        "columnInsertIndex": 13,
+        "description": "Create column type - dcmi recommendation at index 13 based on column type using expression grel:value"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type",
+        "expression": "value.toLowercase()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column type using expression value.toLowercase()"
+    },
+    {
+        "op": "core/column-move",
+        "columnName": "type - dcmi recommendation",
+        "index": 12,
+        "description": "Move column type - dcmi recommendation to position 12"
+    },
+    {
+        "op": "core/column-move",
+        "columnName": "type - dcmi recommendation",
+        "index": 12,
+        "description": "Move column type - dcmi recommendation to position 12"
+    },
+    {
+        "op": "core/column-move",
+        "columnName": "type - dcmi recommendation",
+        "index": 6,
+        "description": "Move column type - dcmi recommendation to position 6"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "article"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "book"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "book part"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "conference paper"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "conference poster"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "dataset"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "dataset"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "deliverable"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "doctoral thesis"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "lecture"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "lesson"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "milestone"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": ""
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "other"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "other"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "photo"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "image"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "preprint"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "presentation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "report"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "section"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "software documentation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "technical documentation"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "technical note"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "video"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "moving image"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "record-based"
+        },
+        "columnName": "type - dcmi recommendation",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "workingpaper"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "text"
+            }
+        ],
+        "description": "Mass edit cells in column type - dcmi recommendation"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "subject",
+                    "columnName": "subject",
+                    "query": "artefact",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "understandinmg written artefacts"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "understanding written artefacts"
+            }
+        ],
+        "description": "Mass edit cells in column subject"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "text",
+                    "name": "subject",
+                    "columnName": "subject",
+                    "query": "artefact",
+                    "mode": "text",
+                    "caseSensitive": false,
+                    "invert": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "subject",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "written artefact"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "written artefacts"
+            }
+        ],
+        "description": "Mass edit cells in column subject"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "record - header - identifier",
+        "newColumnName": "record id",
+        "description": "Rename column record - header - identifier to record id"
+    }
+]
