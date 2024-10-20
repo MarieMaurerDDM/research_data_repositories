@@ -1,6 +1,6 @@
 # Research Data Repositories
 
-Simple overview of use/purpose.
+Retrieve and visualize metadata from CLARIN research data repositories for an explorative study on linguistic research data.
 
 ## Description
 
